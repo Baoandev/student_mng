@@ -1,6 +1,6 @@
 ﻿namespace student_mng
 {
-	partial class Form_Student
+	partial class Form_Admin
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,17 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.SuspendLayout();
-			// 
-			// Form_Student
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Name = "Form_Student";
-			this.Text = "Sinh viên";
-			this.ResumeLayout(false);
-
+			this.Text = "Form_Admin";
 		}
 
 		#endregion
