@@ -109,5 +109,10 @@ namespace student_mng
 				formad.ShowDialog();
 			}
 		}
+
+		private void btnDangNhap_admin_TextChanged(object sender, EventArgs e)
+		{
+			txtMatKhau_admin.PasswordChar = '*';
+		}
 	}
 }
