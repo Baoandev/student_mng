@@ -17,6 +17,7 @@ namespace student_mng
 	{
 		DataTable dtCourse = null;
 		string err;
+		DataTable dtStudent = null;
 		public Form_Teacher()
 		{
 			InitializeComponent();
@@ -69,17 +70,8 @@ namespace student_mng
 				MessageBox.Show("loi");
 			}
 		}
+
 		
-		/*public void LoadMaGiangVien()
-		{
-			DataTable dt = new DataTable();
-			BL_Course bLCou = new BL_Course();
-			dt = bLCou.layMaGiangVien();
-			foreach (DataRow dr in dt.Rows)
-			{
-				cboMaGiangVien_TimMon.Items.Add(dr["teacherId"].ToString());
-			}
-		}*/
 
 		private void btnSearch_Click(object sender, EventArgs e)
 		{
@@ -117,6 +109,59 @@ namespace student_mng
 			{
 				MessageBox.Show("Không xóa được. Lỗi rồi!");
 			}
+		}
+
+		private void btnTimSinhVien_Click(object sender, EventArgs e)
+		{
+			LoadSinhVien(this.txtMaLop_Tim.Text.ToString(),this.txtMaSv_Tim.Text.ToString());
+		}
+		public void LoadSinhVien(string maLop, string maSv)
+		{
+			try
+			{
+				Bl_Student blStu = new Bl_Student();
+				dtStudent = new DataTable();
+				dtStudent.Clear();
+				DataSet ds = blStu.TimSinhVien(maLop, maSv);
+				dtStudent = ds.Tables[0];
+
+				dgvLaySVTuEnroll.DataSource = dtStudent;
+				dgvLaySVTuEnroll.AutoResizeColumns();
+
+			}
+			catch
+			{
+				MessageBox.Show("loi");
+			}
+		}
+		public void LoadListSinhVien(string maLop)
+		{
+			try
+			{
+				Bl_Student blStu = new Bl_Student();
+				dtStudent = new DataTable();
+				dtStudent.Clear();
+				DataSet ds = blStu.TimListSinhVien(maLop);
+				dtStudent = ds.Tables[0];
+
+				dgvListSinhVienTrong1Lop.DataSource = dtStudent;
+				dgvListSinhVienTrong1Lop.AutoResizeColumns();
+
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("loi",ex.Message);
+			}
+		}
+
+		private void btnSearchListSinhVien_Click(object sender, EventArgs e)
+		{
+			LoadListSinhVien(this.txtMaLop_TimListSinhVien.Text.ToString());
+		}
+
+		private void btnChamDiem_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

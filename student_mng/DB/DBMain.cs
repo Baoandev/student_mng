@@ -18,7 +18,6 @@ namespace student_mng.DB
 		{
 			conn = new SqlConnection(ConnStr);
 			comm = conn.CreateCommand();
-
 		}
 		public SqlConnection OpenConnect()
 		{
