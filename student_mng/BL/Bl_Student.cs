@@ -30,18 +30,6 @@ namespace student_mng.BL
 			dt = db.ExecuteQueryDataSet(query, CommandType.Text).Tables[0];
 			return dt;
 		}*/
-		public DataSet TimSinhVien(string maLop, string maSv)
-		{
-
-			string sqlString = $"EXECUTE Proc_GetStudentInfoByStudentAndCourse '{maLop}', '{maSv}'";
-			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
-		}
-
-		public DataSet TimListSinhVien(string maLop)
-		{
-
-			string sqlString = $"EXECUTE Proc_GetStudentsInCourse '{maLop}'";
-			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
-		}
+		
 	}
 }

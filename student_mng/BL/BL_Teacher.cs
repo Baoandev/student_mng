@@ -22,6 +22,25 @@ namespace student_mng.BL
 
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}
+		public DataSet TimSinhVien(string maLop, string maSv)
+		{
 
+			string sqlString = $"EXECUTE Proc_GetStudentInfoByStudentAndCourse '{maLop}', '{maSv}'";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
+
+		public DataSet TimListSinhVien(string maLop)
+		{
+			string sqlString = $"EXECUTE Proc_GetStudentsInCourse '{maLop}'";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
+		public bool ChamDiem(string maLop, string maSv,int diem, ref string err )
+		{
+			string sqlString = "Insert Into Attending Values(" + "'" +
+			maLop + "',N'" +
+			maSv + "',N'" +
+			diem + "')";
+			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+		}
 	}
 }
