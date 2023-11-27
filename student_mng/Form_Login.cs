@@ -110,10 +110,7 @@ namespace student_mng
 			}
 		}
 
-		private void btnDangNhap_admin_TextChanged(object sender, EventArgs e)
-		{
-			txtMatKhau_admin.PasswordChar = '*';
-		}
+
 
 		private void txtMatKhau_admin_TextChanged(object sender, EventArgs e)
 		{

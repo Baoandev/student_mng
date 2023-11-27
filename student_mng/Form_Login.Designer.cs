@@ -255,7 +255,6 @@
 			this.btnDangNhap_admin.TabIndex = 8;
 			this.btnDangNhap_admin.Text = "Đăng nhập";
 			this.btnDangNhap_admin.UseVisualStyleBackColor = true;
-			this.btnDangNhap_admin.TextChanged += new System.EventHandler(this.btnDangNhap_admin_TextChanged);
 			this.btnDangNhap_admin.Click += new System.EventHandler(this.btnDangNhap_admin_Click);
 			// 
 			// txtMatKhau_admin
