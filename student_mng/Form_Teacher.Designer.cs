@@ -49,6 +49,14 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.txtDiem = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.btnSearchListSinhVien = new System.Windows.Forms.Button();
+			this.txtMaLop_TimListSinhVien = new System.Windows.Forms.TextBox();
+			this.label14 = new System.Windows.Forms.Label();
+			this.dgvListSinhVienTrong1Lop = new System.Windows.Forms.DataGridView();
+			this.label13 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.txtMaLop_Tim = new System.Windows.Forms.TextBox();
@@ -61,20 +69,12 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
-			this.label13 = new System.Windows.Forms.Label();
-			this.dgvListSinhVienTrong1Lop = new System.Windows.Forms.DataGridView();
-			this.label14 = new System.Windows.Forms.Label();
-			this.txtMaLop_TimListSinhVien = new System.Windows.Forms.TextBox();
-			this.btnSearchListSinhVien = new System.Windows.Forms.Button();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.txtDiem = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.cboMaMonHoc.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).BeginInit();
 			this.tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListSinhVienTrong1Lop)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -119,7 +119,7 @@
 			this.cboMaMonHoc.Padding = new System.Windows.Forms.Padding(3);
 			this.cboMaMonHoc.Size = new System.Drawing.Size(1068, 604);
 			this.cboMaMonHoc.TabIndex = 0;
-			this.cboMaMonHoc.Text = "tabPage1";
+			this.cboMaMonHoc.Text = "Thêm môn học";
 			this.cboMaMonHoc.UseVisualStyleBackColor = true;
 			// 
 			// label2
@@ -294,8 +294,76 @@
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(1068, 604);
 			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "tabPage2";
+			this.tabPage2.Text = "Chấm điểm";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// txtDiem
+			// 
+			this.txtDiem.Location = new System.Drawing.Point(151, 171);
+			this.txtDiem.Name = "txtDiem";
+			this.txtDiem.Size = new System.Drawing.Size(100, 20);
+			this.txtDiem.TabIndex = 23;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(49, 176);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(34, 13);
+			this.label16.TabIndex = 22;
+			this.label16.Text = "Điểm:";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(608, 76);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(113, 13);
+			this.label15.TabIndex = 21;
+			this.label15.Text = "Tìm sinh viên theo lớp:";
+			// 
+			// btnSearchListSinhVien
+			// 
+			this.btnSearchListSinhVien.Location = new System.Drawing.Point(271, 245);
+			this.btnSearchListSinhVien.Name = "btnSearchListSinhVien";
+			this.btnSearchListSinhVien.Size = new System.Drawing.Size(75, 23);
+			this.btnSearchListSinhVien.TabIndex = 20;
+			this.btnSearchListSinhVien.Text = "SEARCH";
+			this.btnSearchListSinhVien.UseVisualStyleBackColor = true;
+			this.btnSearchListSinhVien.Click += new System.EventHandler(this.btnSearchListSinhVien_Click);
+			// 
+			// txtMaLop_TimListSinhVien
+			// 
+			this.txtMaLop_TimListSinhVien.Location = new System.Drawing.Point(122, 242);
+			this.txtMaLop_TimListSinhVien.Name = "txtMaLop_TimListSinhVien";
+			this.txtMaLop_TimListSinhVien.Size = new System.Drawing.Size(100, 20);
+			this.txtMaLop_TimListSinhVien.TabIndex = 19;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(49, 245);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(42, 13);
+			this.label14.TabIndex = 18;
+			this.label14.Text = "Mã lớp:";
+			// 
+			// dgvListSinhVienTrong1Lop
+			// 
+			this.dgvListSinhVienTrong1Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvListSinhVienTrong1Lop.Location = new System.Drawing.Point(52, 273);
+			this.dgvListSinhVienTrong1Lop.Name = "dgvListSinhVienTrong1Lop";
+			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(420, 249);
+			this.dgvListSinhVienTrong1Lop.TabIndex = 17;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(608, 157);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(70, 13);
+			this.label13.TabIndex = 16;
+			this.label13.Text = "Mã sinh viên:";
 			// 
 			// label12
 			// 
@@ -399,74 +467,6 @@
 			this.label8.TabIndex = 0;
 			this.label8.Text = "Chấm điểm";
 			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(608, 157);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(70, 13);
-			this.label13.TabIndex = 16;
-			this.label13.Text = "Mã sinh viên:";
-			// 
-			// dgvListSinhVienTrong1Lop
-			// 
-			this.dgvListSinhVienTrong1Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvListSinhVienTrong1Lop.Location = new System.Drawing.Point(52, 273);
-			this.dgvListSinhVienTrong1Lop.Name = "dgvListSinhVienTrong1Lop";
-			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(420, 249);
-			this.dgvListSinhVienTrong1Lop.TabIndex = 17;
-			// 
-			// label14
-			// 
-			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(49, 245);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(42, 13);
-			this.label14.TabIndex = 18;
-			this.label14.Text = "Mã lớp:";
-			// 
-			// txtMaLop_TimListSinhVien
-			// 
-			this.txtMaLop_TimListSinhVien.Location = new System.Drawing.Point(122, 242);
-			this.txtMaLop_TimListSinhVien.Name = "txtMaLop_TimListSinhVien";
-			this.txtMaLop_TimListSinhVien.Size = new System.Drawing.Size(100, 20);
-			this.txtMaLop_TimListSinhVien.TabIndex = 19;
-			// 
-			// btnSearchListSinhVien
-			// 
-			this.btnSearchListSinhVien.Location = new System.Drawing.Point(271, 245);
-			this.btnSearchListSinhVien.Name = "btnSearchListSinhVien";
-			this.btnSearchListSinhVien.Size = new System.Drawing.Size(75, 23);
-			this.btnSearchListSinhVien.TabIndex = 20;
-			this.btnSearchListSinhVien.Text = "SEARCH";
-			this.btnSearchListSinhVien.UseVisualStyleBackColor = true;
-			this.btnSearchListSinhVien.Click += new System.EventHandler(this.btnSearchListSinhVien_Click);
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(608, 76);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(113, 13);
-			this.label15.TabIndex = 21;
-			this.label15.Text = "Tìm sinh viên theo lớp:";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(49, 176);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(34, 13);
-			this.label16.TabIndex = 22;
-			this.label16.Text = "Điểm:";
-			// 
-			// txtDiem
-			// 
-			this.txtDiem.Location = new System.Drawing.Point(151, 171);
-			this.txtDiem.Name = "txtDiem";
-			this.txtDiem.Size = new System.Drawing.Size(100, 20);
-			this.txtDiem.TabIndex = 23;
-			// 
 			// Form_Teacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,8 +484,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListSinhVienTrong1Lop)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

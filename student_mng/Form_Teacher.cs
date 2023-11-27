@@ -119,10 +119,10 @@ namespace student_mng
 		{
 			try
 			{
-				Bl_Student blStu = new Bl_Student();
+				BL_Teacher blTea = new BL_Teacher();
 				dtStudent = new DataTable();
 				dtStudent.Clear();
-				DataSet ds = blStu.TimSinhVien(maLop, maSv);
+				DataSet ds = blTea.TimSinhVien(maLop, maSv);
 				dtStudent = ds.Tables[0];
 
 				dgvLaySVTuEnroll.DataSource = dtStudent;
@@ -138,10 +138,10 @@ namespace student_mng
 		{
 			try
 			{
-				Bl_Student blStu = new Bl_Student();
+				BL_Teacher blTea = new BL_Teacher();
 				dtStudent = new DataTable();
 				dtStudent.Clear();
-				DataSet ds = blStu.TimListSinhVien(maLop);
+				DataSet ds = blTea.TimListSinhVien(maLop);
 				dtStudent = ds.Tables[0];
 
 				dgvListSinhVienTrong1Lop.DataSource = dtStudent;
@@ -161,7 +161,26 @@ namespace student_mng
 
 		private void btnChamDiem_Click(object sender, EventArgs e)
 		{
+			try
+			{
+				BL_Teacher blTea = new BL_Teacher();
+				string maLop = this.txtMaLop_ChamDiem.Text.ToString();
+				string maSv = this.txtMaSinhVien_ChamDiem.Text.ToString();
+				int diem = int.Parse(this.txtDiem.Text);
 
+				blTea.ChamDiem(maLop,maSv,diem, ref err);
+
+				MessageBox.Show("Da cham diem cho sinh vien");
+
+				txtMaLop_ChamDiem.ResetText();
+				txtMaSinhVien_ChamDiem.ResetText();
+				txtDiem.ResetText();
+
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Khong cham diem duoc", ex.Message);
+			}
 		}
 	}
 }

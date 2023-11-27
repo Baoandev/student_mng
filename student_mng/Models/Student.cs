@@ -8,16 +8,14 @@ namespace student_mng.Models
 {
 	public class Student
 	{
-		private int accountId;
 		private string username;
-		private string password;	
+		private string password;
 		private string fullName;
 		private DateTime birthday;
 		private string sex;
 		private string phone;
 		private string address;
 
-		public int AccountId { get => accountId; set => accountId = value; }
 		public string Username { get => username; set => username = value; }
 		public string Password { get => password; set => password = value; }
 		public string FullName { get => fullName; set => fullName = value; }

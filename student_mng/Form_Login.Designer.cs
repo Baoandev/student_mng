@@ -44,11 +44,11 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.txtTaiKhoan_admin = new System.Windows.Forms.TextBox();
-			this.txtMatKhau_admin = new System.Windows.Forms.TextBox();
 			this.btnDangNhap_admin = new System.Windows.Forms.Button();
+			this.txtMatKhau_admin = new System.Windows.Forms.TextBox();
+			this.txtTaiKhoan_admin = new System.Windows.Forms.TextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -245,17 +245,35 @@
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Admin";
 			// 
-			// label7
+			// btnDangNhap_admin
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label7.Location = new System.Drawing.Point(28, 36);
-			this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(87, 20);
-			this.label7.TabIndex = 3;
-			this.label7.Text = "Username:";
+			this.btnDangNhap_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDangNhap_admin.Location = new System.Drawing.Point(145, 127);
+			this.btnDangNhap_admin.Margin = new System.Windows.Forms.Padding(2);
+			this.btnDangNhap_admin.Name = "btnDangNhap_admin";
+			this.btnDangNhap_admin.Size = new System.Drawing.Size(105, 29);
+			this.btnDangNhap_admin.TabIndex = 8;
+			this.btnDangNhap_admin.Text = "Đăng nhập";
+			this.btnDangNhap_admin.UseVisualStyleBackColor = true;
+			this.btnDangNhap_admin.TextChanged += new System.EventHandler(this.btnDangNhap_admin_TextChanged);
+			this.btnDangNhap_admin.Click += new System.EventHandler(this.btnDangNhap_admin_Click);
+			// 
+			// txtMatKhau_admin
+			// 
+			this.txtMatKhau_admin.Location = new System.Drawing.Point(145, 78);
+			this.txtMatKhau_admin.Margin = new System.Windows.Forms.Padding(2);
+			this.txtMatKhau_admin.Name = "txtMatKhau_admin";
+			this.txtMatKhau_admin.Size = new System.Drawing.Size(170, 20);
+			this.txtMatKhau_admin.TabIndex = 7;
+			this.txtMatKhau_admin.TextChanged += new System.EventHandler(this.txtMatKhau_admin_TextChanged);
+			// 
+			// txtTaiKhoan_admin
+			// 
+			this.txtTaiKhoan_admin.Location = new System.Drawing.Point(145, 38);
+			this.txtTaiKhoan_admin.Margin = new System.Windows.Forms.Padding(2);
+			this.txtTaiKhoan_admin.Name = "txtTaiKhoan_admin";
+			this.txtTaiKhoan_admin.Size = new System.Drawing.Size(170, 20);
+			this.txtTaiKhoan_admin.TabIndex = 6;
 			// 
 			// label8
 			// 
@@ -269,34 +287,17 @@
 			this.label8.TabIndex = 4;
 			this.label8.Text = "Password:";
 			// 
-			// txtTaiKhoan_admin
+			// label7
 			// 
-			this.txtTaiKhoan_admin.Location = new System.Drawing.Point(145, 38);
-			this.txtTaiKhoan_admin.Margin = new System.Windows.Forms.Padding(2);
-			this.txtTaiKhoan_admin.Name = "txtTaiKhoan_admin";
-			this.txtTaiKhoan_admin.Size = new System.Drawing.Size(170, 20);
-			this.txtTaiKhoan_admin.TabIndex = 6;
-			// 
-			// txtMatKhau_admin
-			// 
-			this.txtMatKhau_admin.Location = new System.Drawing.Point(145, 78);
-			this.txtMatKhau_admin.Margin = new System.Windows.Forms.Padding(2);
-			this.txtMatKhau_admin.Name = "txtMatKhau_admin";
-			this.txtMatKhau_admin.Size = new System.Drawing.Size(170, 20);
-			this.txtMatKhau_admin.TabIndex = 7;
-			// 
-			// btnDangNhap_admin
-			// 
-			this.btnDangNhap_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDangNhap_admin.Location = new System.Drawing.Point(145, 127);
-			this.btnDangNhap_admin.Margin = new System.Windows.Forms.Padding(2);
-			this.btnDangNhap_admin.Name = "btnDangNhap_admin";
-			this.btnDangNhap_admin.Size = new System.Drawing.Size(105, 29);
-			this.btnDangNhap_admin.TabIndex = 8;
-			this.btnDangNhap_admin.Text = "Đăng nhập";
-			this.btnDangNhap_admin.UseVisualStyleBackColor = true;
-			this.btnDangNhap_admin.TextChanged += new System.EventHandler(this.btnDangNhap_admin_TextChanged);
-			this.btnDangNhap_admin.Click += new System.EventHandler(this.btnDangNhap_admin_Click);
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label7.Location = new System.Drawing.Point(28, 36);
+			this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(87, 20);
+			this.label7.TabIndex = 3;
+			this.label7.Text = "Username:";
 			// 
 			// Form_Login
 			// 
