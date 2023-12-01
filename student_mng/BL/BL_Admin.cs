@@ -28,7 +28,7 @@ namespace student_mng.BL
 		public bool ThemSinhVien(Student stu)
 		{
 			db.OpenConnect();
-			SqlCommand cmd = new SqlCommand("EXEC Proc_InsertStudentData @username,@password,@fullname,@birthday,@sex,@phone,@address", db.OpenConnect());
+			SqlCommand cmd = new SqlCommand("EXEC Proc_ThemSinhVien @username,@password,@fullname,@birthday,@sex,@phone,@address", db.OpenConnect());
 
 			cmd.Parameters.AddWithValue("@username", stu.Username);
 			cmd.Parameters.AddWithValue("@password", stu.Password);

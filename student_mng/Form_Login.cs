@@ -1,4 +1,5 @@
 ﻿using student_mng.BL;
+using student_mng.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,19 @@ namespace student_mng
 {
 	public partial class Form_Login : Form
 	{
+		BL_Teacher blTea= null;
 		DataTable dtStudent = null;
 		DataTable dtTeacher = null;
 		DataTable dtAdmin = null;
 		string err;
+		public string maGv { get; private set; }
+		public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+
+		private string taiKhoan;
 		public Form_Login()
 		{
 			InitializeComponent();
+			blTea = new BL_Teacher();
 		}
 
 		private void btnDangNhap_Sv_Click(object sender, EventArgs e)
@@ -67,27 +74,31 @@ namespace student_mng
 			try
 			{
 				BL_Teacher blTeacher = new BL_Teacher();
+				Teacher tea = new Teacher();
 				bool check = false;
 				dtTeacher = new DataTable();
 				dtTeacher.Clear();
 				DataSet ds = blTeacher.DangNhap(this.txtTaiKhoan_Gv.Text.ToString());
 				dtTeacher = ds.Tables[0];
 				string mk = dtTeacher.Rows[0][2].ToString();
+				string id = dtTeacher.Rows[0][0].ToString();
 				if (mk == txtMatKhau_Gv.Text.ToString())
 				{
+					tea.AccountId = id;
 					check = true;
 				}
 				if (check == true)
 				{
 					Form_Teacher formTeacher = new Form_Teacher();
+					formTeacher.AccountId = tea.AccountId;
 					formTeacher.ShowDialog();
-
 				}
 			}
 			catch
 			{
 				MessageBox.Show("Không đăng nhập được");
 			}
+			
 		}
 
 		private void btnDangNhap_admin_Click(object sender, EventArgs e)
@@ -108,11 +119,7 @@ namespace student_mng
 				Form_Admin formad =	new Form_Admin();
 				formad.ShowDialog();
 			}
-		}
 
-		private void btnDangNhap_admin_TextChanged(object sender, EventArgs e)
-		{
-			txtMatKhau_admin.PasswordChar = '*';
 		}
 
 		private void txtMatKhau_admin_TextChanged(object sender, EventArgs e)

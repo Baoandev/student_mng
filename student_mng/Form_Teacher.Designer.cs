@@ -69,6 +69,8 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
+			this.lblUsername_gv = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.cboMaMonHoc.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).BeginInit();
@@ -92,11 +94,13 @@
 			this.tabControl1.Location = new System.Drawing.Point(0, 0);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1076, 630);
+			this.tabControl1.Size = new System.Drawing.Size(996, 585);
 			this.tabControl1.TabIndex = 1;
 			// 
 			// cboMaMonHoc
 			// 
+			this.cboMaMonHoc.Controls.Add(this.label17);
+			this.cboMaMonHoc.Controls.Add(this.lblUsername_gv);
 			this.cboMaMonHoc.Controls.Add(this.label2);
 			this.cboMaMonHoc.Controls.Add(this.txtMaMonHoc_Xoa);
 			this.cboMaMonHoc.Controls.Add(this.txtMaGiangVien_TimLop);
@@ -117,7 +121,7 @@
 			this.cboMaMonHoc.Location = new System.Drawing.Point(4, 22);
 			this.cboMaMonHoc.Name = "cboMaMonHoc";
 			this.cboMaMonHoc.Padding = new System.Windows.Forms.Padding(3);
-			this.cboMaMonHoc.Size = new System.Drawing.Size(1068, 604);
+			this.cboMaMonHoc.Size = new System.Drawing.Size(988, 559);
 			this.cboMaMonHoc.TabIndex = 0;
 			this.cboMaMonHoc.Text = "Thêm môn học";
 			this.cboMaMonHoc.UseVisualStyleBackColor = true;
@@ -183,7 +187,7 @@
 			this.dgvDanhSachLopHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvDanhSachLopHoc.Location = new System.Drawing.Point(492, 99);
 			this.dgvDanhSachLopHoc.Name = "dgvDanhSachLopHoc";
-			this.dgvDanhSachLopHoc.Size = new System.Drawing.Size(455, 393);
+			this.dgvDanhSachLopHoc.Size = new System.Drawing.Size(438, 393);
 			this.dgvDanhSachLopHoc.TabIndex = 14;
 			this.dgvDanhSachLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLopHoc_CellClick);
 			// 
@@ -201,6 +205,7 @@
 			// 
 			this.txtMaGiangVien.Location = new System.Drawing.Point(114, 114);
 			this.txtMaGiangVien.Name = "txtMaGiangVien";
+			this.txtMaGiangVien.ReadOnly = true;
 			this.txtMaGiangVien.Size = new System.Drawing.Size(100, 20);
 			this.txtMaGiangVien.TabIndex = 9;
 			// 
@@ -467,6 +472,26 @@
 			this.label8.TabIndex = 0;
 			this.label8.Text = "Chấm điểm";
 			// 
+			// lblUsername_gv
+			// 
+			this.lblUsername_gv.AutoSize = true;
+			this.lblUsername_gv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsername_gv.Location = new System.Drawing.Point(594, 14);
+			this.lblUsername_gv.Name = "lblUsername_gv";
+			this.lblUsername_gv.Size = new System.Drawing.Size(79, 20);
+			this.lblUsername_gv.TabIndex = 25;
+			this.lblUsername_gv.Text = "mmmmm";
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label17.Location = new System.Drawing.Point(489, 14);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(99, 20);
+			this.label17.TabIndex = 26;
+			this.label17.Text = "Giảng viên:";
+			// 
 			// Form_Teacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,5 +559,7 @@
 		private System.Windows.Forms.DataGridView dgvListSinhVienTrong1Lop;
 		private System.Windows.Forms.TextBox txtDiem;
 		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label lblUsername_gv;
+		private System.Windows.Forms.Label label17;
 	}
 }
