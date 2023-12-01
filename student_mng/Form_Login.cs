@@ -14,12 +14,13 @@ namespace student_mng
 {
 	public partial class Form_Login : Form
 	{
-		BL_Teacher blTea= null;
+		BL_Teacher blTea = null;
 		DataTable dtStudent = null;
 		DataTable dtTeacher = null;
 		DataTable dtAdmin = null;
 		string err;
 		public string maGv { get; private set; }
+		public string maSv { get; private set; }
 		public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
 
 		private string taiKhoan;
@@ -34,21 +35,26 @@ namespace student_mng
 			try
 			{
 				Bl_Student blStudent = new Bl_Student();
+				Student stu = new Student();
 				bool check = false;
 				dtStudent = new DataTable();
 				dtStudent.Clear();
 				DataSet ds = blStudent.DangNhap(this.txtTaiKhoan_Hs.Text.ToString());
 				dtStudent = ds.Tables[0];
 				string mk = dtStudent.Rows[0][2].ToString();
+				string id = dtStudent.Rows[0][0].ToString();
 				if (mk == txtMatKhau_Hs.Text.ToString())
 				{
 					check = true;
+					stu.StudentId= id;
 				}
 				if (check == true)
 				{
 					Form_Student formStudent = new Form_Student();
+					formStudent.StudentId = stu.StudentId;
+					this.Visible = false;
 					formStudent.ShowDialog();
-
+					this.Visible = true;
 				}
 			}
 			catch
@@ -91,7 +97,9 @@ namespace student_mng
 				{
 					Form_Teacher formTeacher = new Form_Teacher();
 					formTeacher.AccountId = tea.AccountId;
+					this.Visible = false;
 					formTeacher.ShowDialog();
+					this.Visible=true;
 				}
 			}
 			catch

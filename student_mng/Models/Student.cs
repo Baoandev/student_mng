@@ -8,6 +8,7 @@ namespace student_mng.Models
 {
 	public class Student
 	{
+		private string studentId;
 		private string username;
 		private string password;
 		private string fullName;
@@ -23,5 +24,6 @@ namespace student_mng.Models
 		public string Sex { get => sex; set => sex = value; }
 		public string Phone { get => phone; set => phone = value; }
 		public string Address { get => address; set => address = value; }
+		public string StudentId { get => studentId; set => studentId = value; }
 	}
 }
