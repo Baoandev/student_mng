@@ -18,39 +18,50 @@ namespace student_mng
 		DataTable dtCourse = null;
 		string err;
 		DataTable dtStudent = null;
+		BL_Teacher blTea = new BL_Teacher();
+		Teacher tea = new Teacher();
+		public string AccountId { get; set; }
+
 		public Form_Teacher()
 		{
 			InitializeComponent();
-			//LoadMaGiangVien();
 		}
 
 		private void Form_Teacher_Load(object sender, EventArgs e)
 		{
-
+			lblUsername_gv.Text = AccountId;
 		}
 
 		private void btnThemMonHoc_Click(object sender, EventArgs e)
 		{
 			try
 			{
-				BL_Course blCou = new BL_Course();
-				Course cou = new Course();
-				cou.CourseName = txtTenMonHoc.Text.ToString();
-				cou.TeacherId = int.Parse(txtMaGiangVien.Text);
-				cou.NgayBatDau = dpNgayBatDau.Value;
-				cou.NgayKetThuc = dpNgayKetThuc.Value;
+				if (int.TryParse(lblUsername_gv.Text, out int teacherId))
+				{
+					BL_Course blCou = new BL_Course();
+					Course cou = new Course();
+					cou.CourseName = txtTenMonHoc.Text;
+					cou.TeacherId = teacherId;
+					cou.NgayBatDau = dpNgayBatDau.Value;
+					cou.NgayKetThuc = dpNgayKetThuc.Value;
 
-				blCou.ThemMonHoc(cou);
+					blCou.ThemMonHoc(cou);
 
-				txtMaGiangVien.ResetText();
-				txtTenMonHoc.ResetText();
-				MessageBox.Show("Đã thêm môn học");
+					txtMaGiangVien.ResetText();
+					txtTenMonHoc.ResetText();
+					MessageBox.Show("Đã thêm môn học");
+				}
+				else
+				{
+					MessageBox.Show("Giá trị TeacherId không hợp lệ.");
+				}
 			}
-			catch
+			catch (Exception ex)
 			{
-				MessageBox.Show("Không thêm được");
+				MessageBox.Show("Không thêm được. Lỗi: " + ex.Message);
 			}
 		}
+
 		public void LoadMonHoc(string maGv)
 		{
 			try

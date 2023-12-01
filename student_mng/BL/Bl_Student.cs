@@ -18,7 +18,7 @@ namespace student_mng.BL
 		public DataSet DangNhap(string maHocSinh)
 		{
 
-			string sqlString = "SELECT * FROM StudentAccount WHERE username = '" + maHocSinh + "'";
+			string sqlString = "SELECT * FROM Student WHERE username = '" + maHocSinh + "'";
 
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}

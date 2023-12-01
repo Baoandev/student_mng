@@ -60,7 +60,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(35, 174);
+			this.label4.Location = new System.Drawing.Point(35, 82);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(57, 13);
 			this.label4.TabIndex = 3;
@@ -69,7 +69,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(35, 211);
+			this.label5.Location = new System.Drawing.Point(35, 124);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(57, 13);
 			this.label5.TabIndex = 4;
@@ -78,7 +78,7 @@
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(35, 243);
+			this.label6.Location = new System.Drawing.Point(35, 170);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(50, 13);
 			this.label6.TabIndex = 5;
@@ -87,7 +87,7 @@
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(35, 280);
+			this.label7.Location = new System.Drawing.Point(35, 220);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(73, 13);
 			this.label7.TabIndex = 6;
@@ -96,7 +96,7 @@
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(35, 315);
+			this.label8.Location = new System.Drawing.Point(35, 263);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(43, 13);
 			this.label8.TabIndex = 7;
@@ -104,35 +104,35 @@
 			// 
 			// txtHoTenSV
 			// 
-			this.txtHoTenSV.Location = new System.Drawing.Point(175, 174);
+			this.txtHoTenSV.Location = new System.Drawing.Point(122, 75);
 			this.txtHoTenSV.Name = "txtHoTenSV";
 			this.txtHoTenSV.Size = new System.Drawing.Size(100, 20);
 			this.txtHoTenSV.TabIndex = 10;
 			// 
 			// txtGioiTinh_SV
 			// 
-			this.txtGioiTinh_SV.Location = new System.Drawing.Point(175, 243);
+			this.txtGioiTinh_SV.Location = new System.Drawing.Point(122, 163);
 			this.txtGioiTinh_SV.Name = "txtGioiTinh_SV";
 			this.txtGioiTinh_SV.Size = new System.Drawing.Size(100, 20);
 			this.txtGioiTinh_SV.TabIndex = 11;
 			// 
 			// txtSoDienThoai_SV
 			// 
-			this.txtSoDienThoai_SV.Location = new System.Drawing.Point(175, 280);
+			this.txtSoDienThoai_SV.Location = new System.Drawing.Point(122, 213);
 			this.txtSoDienThoai_SV.Name = "txtSoDienThoai_SV";
 			this.txtSoDienThoai_SV.Size = new System.Drawing.Size(100, 20);
 			this.txtSoDienThoai_SV.TabIndex = 12;
 			// 
 			// txtDiaChi_SV
 			// 
-			this.txtDiaChi_SV.Location = new System.Drawing.Point(175, 315);
+			this.txtDiaChi_SV.Location = new System.Drawing.Point(122, 256);
 			this.txtDiaChi_SV.Name = "txtDiaChi_SV";
 			this.txtDiaChi_SV.Size = new System.Drawing.Size(100, 20);
 			this.txtDiaChi_SV.TabIndex = 13;
 			// 
 			// dpNgaySinh_SV
 			// 
-			this.dpNgaySinh_SV.Location = new System.Drawing.Point(175, 211);
+			this.dpNgaySinh_SV.Location = new System.Drawing.Point(122, 118);
 			this.dpNgaySinh_SV.Name = "dpNgaySinh_SV";
 			this.dpNgaySinh_SV.Size = new System.Drawing.Size(200, 20);
 			this.dpNgaySinh_SV.TabIndex = 14;
@@ -181,7 +181,7 @@
 			// 
 			// btnThem
 			// 
-			this.btnThem.Location = new System.Drawing.Point(352, 389);
+			this.btnThem.Location = new System.Drawing.Point(38, 302);
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new System.Drawing.Size(75, 23);
 			this.btnThem.TabIndex = 20;
