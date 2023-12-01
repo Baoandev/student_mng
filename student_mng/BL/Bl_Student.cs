@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,26 @@ namespace student_mng.BL
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}
 
-		/*public DataTable ThongTinSinhVien(string maLop, string maSv)
+		public DataSet LayDataMonHoc()
 		{
-			DataTable dt = new DataTable();
-			string query = $"EXECUTE Proc_GetStudentInfoByStudentAndCourse '{maLop}', '{maSv}'";
-			dt = db.ExecuteQueryDataSet(query, CommandType.Text).Tables[0];
-			return dt;
-		}*/
+			return db.ExecuteQueryDataSet("select * from Course", CommandType.Text);
+		}
+
+		public bool DangKiMon(string maLop, string maSv, ref string err)
+		{
+			string sqlString = "Insert Into Enroll Values(" + "'" +
+			maLop + "',N'" +
+			maSv + "')";
+			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+		}
+
+		public DataSet LayLopTuMaSV(string maSv)
+		{
+
+			string sqlString = $"EXECUTE Proc_GetCoursesByStudentId '{maSv}'";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
+		
 		
 	}
 }

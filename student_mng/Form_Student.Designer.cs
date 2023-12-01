@@ -28,19 +28,194 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.label2 = new System.Windows.Forms.Label();
+			this.lblUsername_SV = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.dgvDanhSachLop = new System.Windows.Forms.DataGridView();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtMaSv = new System.Windows.Forms.TextBox();
+			this.txtMaLop = new System.Windows.Forms.TextBox();
+			this.btnDangKi = new System.Windows.Forms.Button();
+			this.dgvListLopCuaSinhVienDaDangKi = new System.Windows.Forms.DataGridView();
+			this.label5 = new System.Windows.Forms.Label();
+			this.btnShow = new System.Windows.Forms.Button();
+			this.btnXuatKetQua = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLop)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvListLopCuaSinhVienDaDangKi)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(775, 19);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(109, 25);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "Sinh viên:";
+			// 
+			// lblUsername_SV
+			// 
+			this.lblUsername_SV.AutoSize = true;
+			this.lblUsername_SV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsername_SV.Location = new System.Drawing.Point(900, 19);
+			this.lblUsername_SV.Name = "lblUsername_SV";
+			this.lblUsername_SV.Size = new System.Drawing.Size(97, 25);
+			this.lblUsername_SV.TabIndex = 2;
+			this.lblUsername_SV.Text = "mmmmm";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(98, 19);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(183, 32);
+			this.label1.TabIndex = 3;
+			this.label1.Text = "Đăng kí môn";
+			// 
+			// dgvDanhSachLop
+			// 
+			this.dgvDanhSachLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvDanhSachLop.Location = new System.Drawing.Point(12, 132);
+			this.dgvDanhSachLop.Name = "dgvDanhSachLop";
+			this.dgvDanhSachLop.RowHeadersWidth = 51;
+			this.dgvDanhSachLop.RowTemplate.Height = 24;
+			this.dgvDanhSachLop.Size = new System.Drawing.Size(732, 349);
+			this.dgvDanhSachLop.TabIndex = 4;
+			this.dgvDanhSachLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLop_CellClick);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(80, 502);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(84, 16);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Mã sinh viên:";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(80, 552);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(51, 16);
+			this.label4.TabIndex = 6;
+			this.label4.Text = "Mã lớp:";
+			// 
+			// txtMaSv
+			// 
+			this.txtMaSv.Location = new System.Drawing.Point(216, 496);
+			this.txtMaSv.Name = "txtMaSv";
+			this.txtMaSv.ReadOnly = true;
+			this.txtMaSv.Size = new System.Drawing.Size(100, 22);
+			this.txtMaSv.TabIndex = 7;
+			// 
+			// txtMaLop
+			// 
+			this.txtMaLop.Location = new System.Drawing.Point(216, 552);
+			this.txtMaLop.Name = "txtMaLop";
+			this.txtMaLop.Size = new System.Drawing.Size(100, 22);
+			this.txtMaLop.TabIndex = 8;
+			// 
+			// btnDangKi
+			// 
+			this.btnDangKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDangKi.Location = new System.Drawing.Point(83, 586);
+			this.btnDangKi.Name = "btnDangKi";
+			this.btnDangKi.Size = new System.Drawing.Size(103, 36);
+			this.btnDangKi.TabIndex = 9;
+			this.btnDangKi.Text = "Đăng kí";
+			this.btnDangKi.UseVisualStyleBackColor = true;
+			this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
+			// 
+			// dgvListLopCuaSinhVienDaDangKi
+			// 
+			this.dgvListLopCuaSinhVienDaDangKi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvListLopCuaSinhVienDaDangKi.Location = new System.Drawing.Point(780, 132);
+			this.dgvListLopCuaSinhVienDaDangKi.Name = "dgvListLopCuaSinhVienDaDangKi";
+			this.dgvListLopCuaSinhVienDaDangKi.RowHeadersWidth = 51;
+			this.dgvListLopCuaSinhVienDaDangKi.RowTemplate.Height = 24;
+			this.dgvListLopCuaSinhVienDaDangKi.Size = new System.Drawing.Size(517, 349);
+			this.dgvListLopCuaSinhVienDaDangKi.TabIndex = 10;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(774, 85);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(266, 32);
+			this.label5.TabIndex = 11;
+			this.label5.Text = "Các lớp đã đăng kí";
+			// 
+			// btnShow
+			// 
+			this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnShow.Location = new System.Drawing.Point(1174, 87);
+			this.btnShow.Name = "btnShow";
+			this.btnShow.Size = new System.Drawing.Size(103, 36);
+			this.btnShow.TabIndex = 12;
+			this.btnShow.Text = "Xem";
+			this.btnShow.UseVisualStyleBackColor = true;
+			this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+			// 
+			// btnXuatKetQua
+			// 
+			this.btnXuatKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXuatKetQua.Location = new System.Drawing.Point(780, 519);
+			this.btnXuatKetQua.Name = "btnXuatKetQua";
+			this.btnXuatKetQua.Size = new System.Drawing.Size(260, 36);
+			this.btnXuatKetQua.TabIndex = 13;
+			this.btnXuatKetQua.Text = "Xuất kết quả đăng kí";
+			this.btnXuatKetQua.UseVisualStyleBackColor = true;
+			this.btnXuatKetQua.Click += new System.EventHandler(this.btnXuatKetQua_Click);
 			// 
 			// Form_Student
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1309, 673);
+			this.Controls.Add(this.btnXuatKetQua);
+			this.Controls.Add(this.btnShow);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.dgvListLopCuaSinhVienDaDangKi);
+			this.Controls.Add(this.btnDangKi);
+			this.Controls.Add(this.txtMaLop);
+			this.Controls.Add(this.txtMaSv);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.dgvDanhSachLop);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblUsername_SV);
+			this.Controls.Add(this.label2);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
 			this.Name = "Form_Student";
 			this.Text = "Sinh viên";
+			this.Load += new System.EventHandler(this.Form_Student_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLop)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvListLopCuaSinhVienDaDangKi)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblUsername_SV;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.DataGridView dgvDanhSachLop;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox txtMaSv;
+		private System.Windows.Forms.TextBox txtMaLop;
+		private System.Windows.Forms.Button btnDangKi;
+		private System.Windows.Forms.DataGridView dgvListLopCuaSinhVienDaDangKi;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Button btnShow;
+		private System.Windows.Forms.Button btnXuatKetQua;
 	}
 }
