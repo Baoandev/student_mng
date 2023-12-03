@@ -29,17 +29,17 @@ namespace student_mng.BL
 			return db.ExecuteQueryDataSet("select * from Course", CommandType.Text);
 		}
 
-		public bool DangKiMon(string maLop, string maSv, ref string err)
+		public bool DangKiMon(string maLop, string maSv,string diem, ref string err)
 		{
-			string sqlString = "Insert Into Enroll Values(" + "'" +
+			string sqlString = "Insert Into Attending Values(" + "'" +
 			maLop + "',N'" +
-			maSv + "')";
+			maSv + "',N'" +
+			diem + "')";
 			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 		}
 
 		public DataSet LayLopTuMaSV(string maSv)
 		{
-
 			string sqlString = $"EXECUTE Proc_GetCoursesByStudentId '{maSv}'";
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}

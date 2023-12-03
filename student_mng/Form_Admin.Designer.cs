@@ -197,10 +197,11 @@
 			// 
 			// btnThem
 			// 
+			this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnThem.Location = new System.Drawing.Point(51, 372);
 			this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.btnThem.Name = "btnThem";
-			this.btnThem.Size = new System.Drawing.Size(100, 28);
+			this.btnThem.Size = new System.Drawing.Size(110, 37);
 			this.btnThem.TabIndex = 20;
 			this.btnThem.Text = "Thêm";
 			this.btnThem.UseVisualStyleBackColor = true;
