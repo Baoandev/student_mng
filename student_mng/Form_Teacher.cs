@@ -21,7 +21,7 @@ namespace student_mng
 		BL_Teacher blTea = new BL_Teacher();
 		Teacher tea = new Teacher();
 		public string AccountId { get; set; }
-
+		
 		public Form_Teacher()
 		{
 			InitializeComponent();
@@ -30,6 +30,7 @@ namespace student_mng
 		private void Form_Teacher_Load(object sender, EventArgs e)
 		{
 			lblUsername_gv.Text = AccountId;
+			txtMaGiangVien_TimLop.Text= AccountId;
 		}
 
 		private void btnThemMonHoc_Click(object sender, EventArgs e)

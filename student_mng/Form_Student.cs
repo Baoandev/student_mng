@@ -24,13 +24,19 @@ namespace student_mng
 		{
 			InitializeComponent();
 			LoadData();
-			
+		
 		}
 		private void Form_Student_Load(object sender, EventArgs e)
 		{
 			lblUsername_SV.Text = StudentId;
+			txtMaSv.Text = StudentId;
 		}
 
+		public void loadMaSv()
+		{
+			string value = lblUsername_SV.Text;
+			txtMaSv.Text = value;
+		}
 		public void LoadData()
 		{
 			try
@@ -53,29 +59,49 @@ namespace student_mng
 		{
 			try
 			{
-				
 				Bl_Student blStu = new Bl_Student();
 				string maLop = this.txtMaLop.Text.ToString();
 				string maSv = lblUsername_SV.Text.ToString();
+				string diem = "0";
 
-				blStu.DangKiMon(maLop,maSv, ref err);
+				// Kiểm tra kết quả từ hàm DangKiMon
+				if (!blStu.DangKiMon(maLop, maSv, diem, ref err))
+				{
+					MessageBox.Show("Không đăng kí được: " + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return; // Dừng lại nếu có lỗi
+				}
 
 				txtMaLop.ResetText();
 				txtMaSv.ResetText();
 				MessageBox.Show("Đã đăng kí");
-			
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
-				MessageBox.Show("Khong dang ki duoc", ex.Message);
+				MessageBox.Show("Không đăng kí được", ex.Message);
 			}
+
 		}
 
 		private void dgvDanhSachLop_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int r = dgvDanhSachLop.CurrentCell.RowIndex;
-			int maLop = (int)dgvDanhSachLop.Rows[r].Cells[0].Value;
-			this.txtMaLop.Text = maLop.ToString();
+
+			if (dgvDanhSachLop.Rows[r].Cells[0].Value != null)
+			{
+				if (int.TryParse(dgvDanhSachLop.Rows[r].Cells[0].Value.ToString(), out int maLop))
+				{
+					this.txtMaLop.Text = maLop.ToString();
+				}
+				else
+				{
+					// Xử lý trường hợp giá trị không hợp lệ
+					MessageBox.Show("Không có lớp học phần.");
+				}
+			}
+			else
+			{
+				MessageBox.Show("Giá trị là null.");
+			}
 		}
 
 		public void LoadMonHoc(string maSv)
@@ -95,7 +121,7 @@ namespace student_mng
 			}
 			catch
 			{
-				MessageBox.Show("loi");
+				MessageBox.Show("Lỗi!");
 			}
 		}
 
