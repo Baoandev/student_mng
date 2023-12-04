@@ -15,12 +15,15 @@ namespace student_mng
 {
 	public partial class Form_Student : Form
 	{
-		
-		DataTable dtCou = null;
+
+		private Student student;
+        public Student Student { get => student; set => student = value; }
+
+        DataTable dtCou = null;
 		Bl_Student blStu = new Bl_Student();
 		string err;
-		public string StudentId { get; set; }
-		public Form_Student()
+
+        public Form_Student()
 		{
 			InitializeComponent();
 			LoadData();
@@ -28,14 +31,13 @@ namespace student_mng
 		}
 		private void Form_Student_Load(object sender, EventArgs e)
 		{
-			lblUsername_SV.Text = StudentId;
-			txtMaSv.Text = StudentId;
+			loadMaSv();
 		}
 
 		public void loadMaSv()
 		{
-			string value = lblUsername_SV.Text;
-			txtMaSv.Text = value;
+			lblUsername_SV.Text = Student.StudentId;
+			txtMaSv.Text = Student.StudentId;
 		}
 		public void LoadData()
 		{
@@ -59,7 +61,7 @@ namespace student_mng
 		{
 			try
 			{
-				Bl_Student blStu = new Bl_Student();
+                Bl_Student blStu = new Bl_Student();
 				string maLop = this.txtMaLop.Text.ToString();
 				string maSv = lblUsername_SV.Text.ToString();
 				string diem = "0";
@@ -73,7 +75,9 @@ namespace student_mng
 
 				txtMaLop.ResetText();
 				txtMaSv.ResetText();
-				MessageBox.Show("Đã đăng kí");
+                loadMaSv();
+                MessageBox.Show("Đã đăng kí");
+		
 			}
 			catch (Exception ex)
 			{
@@ -166,5 +170,22 @@ namespace student_mng
 				MessageBox.Show("Dữ liệu đã được xuất ra tập tin thành công!");
 			}
 		}
-	}
+
+        private void btStudentDetail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form_Student_Detail formDetail = new Form_Student_Detail();
+
+                formDetail.DetailStudent = this.Student;
+
+                formDetail.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể mở Form_Student_Detail: " + ex.Message);
+            }
+
+        }
+    }
 }
