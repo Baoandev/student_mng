@@ -54,28 +54,28 @@
 			this.label16 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
 			this.btnSearchListSinhVien = new System.Windows.Forms.Button();
-			this.txtMaLop_TimListSinhVien = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.dgvListSinhVienTrong1Lop = new System.Windows.Forms.DataGridView();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
-			this.txtMaLop_Tim = new System.Windows.Forms.TextBox();
 			this.txtMaSv_Tim = new System.Windows.Forms.TextBox();
 			this.btnTimSinhVien = new System.Windows.Forms.Button();
-			this.dgvLaySVTuEnroll = new System.Windows.Forms.DataGridView();
 			this.btnChamDiem = new System.Windows.Forms.Button();
 			this.txtMaSinhVien_ChamDiem = new System.Windows.Forms.TextBox();
 			this.txtMaLop_ChamDiem = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
+			this.cboMaLop_1 = new System.Windows.Forms.ComboBox();
+			this.label18 = new System.Windows.Forms.Label();
+			this.lblUsernameGv_2 = new System.Windows.Forms.Label();
+			this.cboMaLop_2 = new System.Windows.Forms.ComboBox();
 			this.tabControl1.SuspendLayout();
 			this.cboMaMonHoc.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListSinhVienTrong1Lop)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabControl1
@@ -111,7 +111,7 @@
 			this.cboMaMonHoc.Controls.Add(this.label1);
 			this.cboMaMonHoc.Location = new System.Drawing.Point(4, 22);
 			this.cboMaMonHoc.Name = "cboMaMonHoc";
-			this.cboMaMonHoc.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+			this.cboMaMonHoc.Padding = new System.Windows.Forms.Padding(3);
 			this.cboMaMonHoc.Size = new System.Drawing.Size(988, 559);
 			this.cboMaMonHoc.TabIndex = 0;
 			this.cboMaMonHoc.Text = "Lớp học";
@@ -286,20 +286,21 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.cboMaLop_2);
+			this.tabPage2.Controls.Add(this.lblUsernameGv_2);
+			this.tabPage2.Controls.Add(this.label18);
+			this.tabPage2.Controls.Add(this.cboMaLop_1);
 			this.tabPage2.Controls.Add(this.txtDiem);
 			this.tabPage2.Controls.Add(this.label16);
 			this.tabPage2.Controls.Add(this.label15);
 			this.tabPage2.Controls.Add(this.btnSearchListSinhVien);
-			this.tabPage2.Controls.Add(this.txtMaLop_TimListSinhVien);
 			this.tabPage2.Controls.Add(this.label14);
 			this.tabPage2.Controls.Add(this.dgvListSinhVienTrong1Lop);
 			this.tabPage2.Controls.Add(this.label13);
 			this.tabPage2.Controls.Add(this.label12);
 			this.tabPage2.Controls.Add(this.label11);
-			this.tabPage2.Controls.Add(this.txtMaLop_Tim);
 			this.tabPage2.Controls.Add(this.txtMaSv_Tim);
 			this.tabPage2.Controls.Add(this.btnTimSinhVien);
-			this.tabPage2.Controls.Add(this.dgvLaySVTuEnroll);
 			this.tabPage2.Controls.Add(this.btnChamDiem);
 			this.tabPage2.Controls.Add(this.txtMaSinhVien_ChamDiem);
 			this.tabPage2.Controls.Add(this.txtMaLop_ChamDiem);
@@ -308,7 +309,7 @@
 			this.tabPage2.Controls.Add(this.label8);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
 			this.tabPage2.Size = new System.Drawing.Size(988, 559);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Chấm điểm";
@@ -349,13 +350,6 @@
 			this.btnSearchListSinhVien.UseVisualStyleBackColor = true;
 			this.btnSearchListSinhVien.Click += new System.EventHandler(this.btnSearchListSinhVien_Click);
 			// 
-			// txtMaLop_TimListSinhVien
-			// 
-			this.txtMaLop_TimListSinhVien.Location = new System.Drawing.Point(122, 242);
-			this.txtMaLop_TimListSinhVien.Name = "txtMaLop_TimListSinhVien";
-			this.txtMaLop_TimListSinhVien.Size = new System.Drawing.Size(100, 20);
-			this.txtMaLop_TimListSinhVien.TabIndex = 19;
-			// 
 			// label14
 			// 
 			this.label14.AutoSize = true;
@@ -371,7 +365,7 @@
 			this.dgvListSinhVienTrong1Lop.Location = new System.Drawing.Point(52, 273);
 			this.dgvListSinhVienTrong1Lop.Name = "dgvListSinhVienTrong1Lop";
 			this.dgvListSinhVienTrong1Lop.RowHeadersWidth = 51;
-			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(420, 249);
+			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(521, 249);
 			this.dgvListSinhVienTrong1Lop.TabIndex = 17;
 			// 
 			// label13
@@ -401,13 +395,6 @@
 			this.label11.TabIndex = 14;
 			this.label11.Text = "Danh sách sinh viên của 1 lớp:";
 			// 
-			// txtMaLop_Tim
-			// 
-			this.txtMaLop_Tim.Location = new System.Drawing.Point(706, 107);
-			this.txtMaLop_Tim.Name = "txtMaLop_Tim";
-			this.txtMaLop_Tim.Size = new System.Drawing.Size(100, 20);
-			this.txtMaLop_Tim.TabIndex = 13;
-			// 
 			// txtMaSv_Tim
 			// 
 			this.txtMaSv_Tim.Location = new System.Drawing.Point(706, 157);
@@ -424,15 +411,6 @@
 			this.btnTimSinhVien.Text = "SEARCH";
 			this.btnTimSinhVien.UseVisualStyleBackColor = true;
 			this.btnTimSinhVien.Click += new System.EventHandler(this.btnTimSinhVien_Click);
-			// 
-			// dgvLaySVTuEnroll
-			// 
-			this.dgvLaySVTuEnroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvLaySVTuEnroll.Location = new System.Drawing.Point(560, 273);
-			this.dgvLaySVTuEnroll.Name = "dgvLaySVTuEnroll";
-			this.dgvLaySVTuEnroll.RowHeadersWidth = 51;
-			this.dgvLaySVTuEnroll.Size = new System.Drawing.Size(420, 249);
-			this.dgvLaySVTuEnroll.TabIndex = 10;
 			// 
 			// btnChamDiem
 			// 
@@ -486,6 +464,41 @@
 			this.label8.TabIndex = 0;
 			this.label8.Text = "Chấm điểm";
 			// 
+			// cboMaLop_1
+			// 
+			this.cboMaLop_1.FormattingEnabled = true;
+			this.cboMaLop_1.Location = new System.Drawing.Point(130, 241);
+			this.cboMaLop_1.Name = "cboMaLop_1";
+			this.cboMaLop_1.Size = new System.Drawing.Size(121, 21);
+			this.cboMaLop_1.TabIndex = 24;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label18.Location = new System.Drawing.Point(592, 29);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(116, 24);
+			this.label18.TabIndex = 25;
+			this.label18.Text = "Giảng viên:";
+			// 
+			// lblUsernameGv_2
+			// 
+			this.lblUsernameGv_2.AutoSize = true;
+			this.lblUsernameGv_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsernameGv_2.Location = new System.Drawing.Point(714, 30);
+			this.lblUsernameGv_2.Name = "lblUsernameGv_2";
+			this.lblUsernameGv_2.Size = new System.Drawing.Size(0, 24);
+			this.lblUsernameGv_2.TabIndex = 26;
+			// 
+			// cboMaLop_2
+			// 
+			this.cboMaLop_2.FormattingEnabled = true;
+			this.cboMaLop_2.Location = new System.Drawing.Point(706, 111);
+			this.cboMaLop_2.Name = "cboMaLop_2";
+			this.cboMaLop_2.Size = new System.Drawing.Size(121, 21);
+			this.cboMaLop_2.TabIndex = 27;
+			// 
 			// Form_Teacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +517,6 @@
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvListSinhVienTrong1Lop)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dgvLaySVTuEnroll)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -530,14 +542,12 @@
 		private System.Windows.Forms.TextBox txtMaGiangVien_TimLop;
 		private System.Windows.Forms.TextBox txtMaMonHoc_Xoa;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.DataGridView dgvLaySVTuEnroll;
 		private System.Windows.Forms.Button btnChamDiem;
 		private System.Windows.Forms.TextBox txtMaSinhVien_ChamDiem;
 		private System.Windows.Forms.TextBox txtMaLop_ChamDiem;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox txtMaLop_Tim;
 		private System.Windows.Forms.TextBox txtMaSv_Tim;
 		private System.Windows.Forms.Button btnTimSinhVien;
 		private System.Windows.Forms.Label label12;
@@ -545,12 +555,15 @@
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Button btnSearchListSinhVien;
-		private System.Windows.Forms.TextBox txtMaLop_TimListSinhVien;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.DataGridView dgvListSinhVienTrong1Lop;
 		private System.Windows.Forms.TextBox txtDiem;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label lblUsername_gv;
 		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.ComboBox cboMaLop_1;
+		private System.Windows.Forms.Label lblUsernameGv_2;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.ComboBox cboMaLop_2;
 	}
 }

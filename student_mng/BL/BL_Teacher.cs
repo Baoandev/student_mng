@@ -1,4 +1,5 @@
 ﻿using student_mng.DB;
+using student_mng.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -40,14 +41,37 @@ namespace student_mng.BL
 			string sqlString = $"EXECUTE Proc_LayListSinhVienTrongCourse '{maLop}'";
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}
-		public bool ChamDiem(string maLop, string maSv,int diem, ref string err )
+		/*public bool ChamDiem(string maLop, string maSv,int diem, ref string err )
 		{
-			string sqlString = "Insert Into Attending Values(" + "'" +
+			string sqlString = "Update Into Attending Values(" + "'" +
 			maLop + "',N'" +
 			maSv + "',N'" +
 			diem + "')";
 			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+		}*/
+		public bool ChamDiem(Grade gr)
+		{
+			db.OpenConnect();
+			SqlCommand cmd = new SqlCommand("EXEC Proc_ChamDiem @courseId,@studentId,@grade", db.OpenConnect());
+			cmd.Parameters.AddWithValue("@courseId", gr.MaLop);
+			cmd.Parameters.AddWithValue("@studentId", gr.MaSv);
+			cmd.Parameters.AddWithValue("@grade", gr.Diem);
+			int rowsAffected = cmd.ExecuteNonQuery();
+			db.CloseConnect();
+			return rowsAffected > 0;
 		}
-		
+		public DataTable layMaLop()
+		{
+			DataSet ds = new DataSet();
+			ds = db.ExecuteQueryDataSet("SELECT courseId FROM Course", CommandType.Text);
+			return ds.Tables[0];
+		}
+		public DataTable ThongTinLop(string maGv)
+		{
+			DataTable dt = new DataTable();
+			string query = "SELECT courseId FROM Course WHERE teacherId = '" + maGv + "'";
+			dt = db.ExecuteQueryDataSet(query, CommandType.Text).Tables[0];
+			return dt;
+		}
 	}
 }

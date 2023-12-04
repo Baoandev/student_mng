@@ -25,12 +25,14 @@ namespace student_mng
 		public Form_Teacher()
 		{
 			InitializeComponent();
+			loadMaLop();
 		}
 
 		private void Form_Teacher_Load(object sender, EventArgs e)
 		{
 			lblUsername_gv.Text = AccountId;
 			txtMaGiangVien_TimLop.Text= AccountId;
+			lblUsernameGv_2.Text= AccountId;
 		}
 
 		private void btnThemMonHoc_Click(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace student_mng
 
 		private void btnTimSinhVien_Click(object sender, EventArgs e)
 		{
-			LoadSinhVien(this.txtMaLop_Tim.Text.ToString(),this.txtMaSv_Tim.Text.ToString());
+			LoadSinhVien(this.cboMaLop_2.Text.ToString(),this.txtMaSv_Tim.Text.ToString());
 		}
 		public void LoadSinhVien(string maLop, string maSv)
 		{
@@ -137,8 +139,8 @@ namespace student_mng
 				DataSet ds = blTea.TimSinhVien(maLop, maSv);
 				dtStudent = ds.Tables[0];
 
-				dgvLaySVTuEnroll.DataSource = dtStudent;
-				dgvLaySVTuEnroll.AutoResizeColumns();
+				dgvListSinhVienTrong1Lop.DataSource = dtStudent;
+				dgvListSinhVienTrong1Lop.AutoResizeColumns();
 
 			}
 			catch
@@ -168,7 +170,7 @@ namespace student_mng
 
 		private void btnSearchListSinhVien_Click(object sender, EventArgs e)
 		{
-			LoadListSinhVien(this.txtMaLop_TimListSinhVien.Text.ToString());
+			LoadListSinhVien(this.cboMaLop_1.Text.ToString());
 		}
 
 		private void btnChamDiem_Click(object sender, EventArgs e)
@@ -176,11 +178,12 @@ namespace student_mng
 			try
 			{
 				BL_Teacher blTea = new BL_Teacher();
-				string maLop = this.txtMaLop_ChamDiem.Text.ToString();
-				string maSv = this.txtMaSinhVien_ChamDiem.Text.ToString();
-				int diem = int.Parse(this.txtDiem.Text);
+				Grade gr = new Grade();
+				gr.MaLop = this.txtMaLop_ChamDiem.Text.ToString();
+				gr.MaSv = this.txtMaSinhVien_ChamDiem.Text.ToString();
+				gr.Diem = int.Parse(this.txtDiem.Text);
 
-				blTea.ChamDiem(maLop,maSv,diem, ref err);
+				blTea.ChamDiem(gr);
 
 				MessageBox.Show("Da cham diem cho sinh vien");
 
@@ -192,6 +195,19 @@ namespace student_mng
 			catch(Exception ex)
 			{
 				MessageBox.Show("Khong cham diem duoc", ex.Message);
+			}
+		}
+		public void loadMaLop()
+		{
+			DataTable dataTable = new DataTable();
+			BL_Teacher bLTea = new BL_Teacher();
+			//string maGv = lblUsernameGv_2.Text;
+			dataTable = blTea.layMaLop();
+
+			foreach (DataRow dr in dataTable.Rows)
+			{
+				cboMaLop_1.Items.Add(dr["courseId"].ToString());
+				cboMaLop_2.Items.Add(dr["courseId"].ToString());
 			}
 		}
 	}

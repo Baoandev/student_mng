@@ -73,7 +73,7 @@ namespace student_mng
 
 				txtMaLop.ResetText();
 				txtMaSv.ResetText();
-                loadMaSv();
+                //loadMaSv();
                 MessageBox.Show("Đã đăng kí");
 		
 			}

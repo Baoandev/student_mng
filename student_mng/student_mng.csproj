@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
