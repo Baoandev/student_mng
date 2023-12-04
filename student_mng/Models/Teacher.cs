@@ -7,21 +7,26 @@ using System.Threading.Tasks;
 
 namespace student_mng.Models
 {
-	public class Teacher
+	public class Teacher : Person
 	{
-		private string fullname;
-		private string birthday;
-		private string sex;
-		private string phone;
-		private string address;
+        private string teacherId;
 
-		private string accountId;
+        public Teacher() : base()
+        {
 
-		public string Fullname { get => fullname; set => fullname = value; }
-		public string Birthday { get => birthday; set => birthday = value; }
-		public string Sex { get => sex; set => sex = value; }
-		public string Phone { get => phone; set => phone = value; }
-		public string Address { get => address; set => address = value; }
-		public string AccountId { get => accountId; set => accountId = value; }
-	}
+        }
+
+        public Teacher(string username, string password, string fullName, DateTime birthday, string sex, string phone, string address, string teacherId) : base(username, password, fullName, birthday, sex, phone, address)
+        {
+            this.TeacherId = teacherId;
+        }
+
+        public string TeacherId { get => teacherId; set => teacherId = value; }
+
+        public override void PrintDetails()
+        {
+            base.PrintDetails();
+            return;
+        }
+    }
 }

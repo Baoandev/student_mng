@@ -41,9 +41,9 @@ namespace student_mng
 				dtStudent.Clear();
 				DataSet ds = blStudent.DangNhap(this.txtTaiKhoan_Hs.Text.ToString());
 				dtStudent = ds.Tables[0];
-				string mk = dtStudent.Rows[0][2].ToString();
-				string id = dtStudent.Rows[0][0].ToString();
-				if (mk == txtMatKhau_Hs.Text.ToString())
+                string mk = dtStudent.Rows[0][2].ToString();
+                string id = dtStudent.Rows[0][0].ToString();
+                if (mk == txtMatKhau_Hs.Text.ToString())
 				{
 					check = true;
 					stu.StudentId= id;
@@ -51,7 +51,7 @@ namespace student_mng
 				if (check == true)
 				{
 					Form_Student formStudent = new Form_Student();
-					formStudent.StudentId = stu.StudentId;
+					formStudent.StudentId= stu.StudentId;
 					this.Visible = false;
 					formStudent.ShowDialog();
 					this.Visible = true;
@@ -90,13 +90,13 @@ namespace student_mng
 				string id = dtTeacher.Rows[0][0].ToString();
 				if (mk == txtMatKhau_Gv.Text.ToString())
 				{
-					tea.AccountId = id;
+					tea.TeacherId = id;
 					check = true;
 				}
 				if (check == true)
 				{
 					Form_Teacher formTeacher = new Form_Teacher();
-					formTeacher.AccountId = tea.AccountId;
+					formTeacher.AccountId = tea.TeacherId;
 					this.Visible = false;
 					formTeacher.ShowDialog();
 					this.Visible=true;
