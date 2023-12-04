@@ -6,12 +6,26 @@ using System.Threading.Tasks;
 
 namespace student_mng.Models
 {
-	public class Admin
+	public class Admin : Person
 	{
-		private string username;
-		private string password;
+        private string adminId;
 
-		public string Username { get => username; set => username = value; }
-		public string Password { get => password; set => password = value; }
-	}
+        public Admin() : base()
+        {
+
+        }
+
+        public Admin(string username, string password, string fullName, DateTime birthday, string sex, string phone, string address, string adminId) : base(username, password, fullName, birthday, sex, phone, address)
+        {
+            this.AdminId = adminId;
+        }
+
+        public string AdminId { get => adminId; set => adminId = value; }
+
+        public override void PrintDetails()
+        {
+            base.PrintDetails();
+            return;
+        }
+    }
 }

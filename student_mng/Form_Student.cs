@@ -16,13 +16,10 @@ namespace student_mng
 	public partial class Form_Student : Form
 	{
 
-		private Student student;
-        public Student Student { get => student; set => student = value; }
-
         DataTable dtCou = null;
 		Bl_Student blStu = new Bl_Student();
 		string err;
-
+        public string StudentId { get; set; }
         public Form_Student()
 		{
 			InitializeComponent();
@@ -31,14 +28,15 @@ namespace student_mng
 		}
 		private void Form_Student_Load(object sender, EventArgs e)
 		{
-			loadMaSv();
-		}
+            lblUsername_SV.Text = StudentId;
+            txtMaSv.Text = StudentId;
+        }
 
 		public void loadMaSv()
 		{
-			lblUsername_SV.Text = Student.StudentId;
-			txtMaSv.Text = Student.StudentId;
-		}
+            string value = lblUsername_SV.Text;
+            txtMaSv.Text = value;
+        }
 		public void LoadData()
 		{
 			try
@@ -173,19 +171,21 @@ namespace student_mng
 
         private void btStudentDetail_Click(object sender, EventArgs e)
         {
-            try
-            {
+			try
+			{
+				string maSinhVien = lblUsername_SV.Text;
+
                 Form_Student_Detail formDetail = new Form_Student_Detail();
 
-                formDetail.DetailStudent = this.Student;
+				formDetail.DetailStudent = blStu.LaySinhVien(maSinhVien);
 
-                formDetail.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không thể mở Form_Student_Detail: " + ex.Message);
-            }
+				formDetail.ShowDialog();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Không thể mở Form_Student_Detail: " + ex.Message);
+			}
 
-        }
+		}
     }
 }
