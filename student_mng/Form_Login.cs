@@ -56,6 +56,11 @@ namespace student_mng
 					formStudent.ShowDialog();
 					this.Visible = true;
 				}
+				if (check == false)
+				{
+					MessageBox.Show("Không đăng nhập được");
+
+				}
 			}
 			catch
 			{
@@ -99,7 +104,12 @@ namespace student_mng
 					formTeacher.AccountId = tea.TeacherId;
 					this.Visible = false;
 					formTeacher.ShowDialog();
-					this.Visible=true;
+					this.Visible = true;
+				}
+				if (check == false)
+				{
+					MessageBox.Show("Không đăng nhập được");
+
 				}
 			}
 			catch
@@ -128,6 +138,11 @@ namespace student_mng
 				this.Visible = false;
 				formad.ShowDialog();
 				this.Visible = true;
+			}
+			if (check == false)
+			{
+				MessageBox.Show("Không đăng nhập được");
+
 			}
 
 		}

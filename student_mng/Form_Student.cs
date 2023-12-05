@@ -64,6 +64,11 @@ namespace student_mng
 				string maSv = lblUsername_SV.Text.ToString();
 				string diem = "0";
 
+				if (blStu.CheckSVTrongLop(maLop, maSv, ref err))
+				{
+					MessageBox.Show("Sinh viên đã có trong lớp " + err, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
 				// Kiểm tra kết quả từ hàm DangKiMon
 				if (!blStu.DangKiMon(maLop, maSv, diem, ref err))
 				{
@@ -73,7 +78,6 @@ namespace student_mng
 
 				txtMaLop.ResetText();
 				txtMaSv.ResetText();
-                //loadMaSv();
                 MessageBox.Show("Đã đăng kí");
 		
 			}

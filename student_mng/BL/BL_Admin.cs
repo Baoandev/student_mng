@@ -42,5 +42,22 @@ namespace student_mng.BL
 			db.CloseConnect();
 			return rowsAffected > 0;
 		}
+		public DataSet ReportStudent()
+		{
+			string sqlString = "SELECT studentId, fullName, birthday, sex, phone, address FROM Student";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
+
+		public DataSet ReportCourse()
+		{
+			string sqlString = "SELECT* FROM Course";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
+
+		public DataSet ReportGrade()
+		{
+			string sqlString = "select a.courseId, c.courseName, s.fullName, a.grade from Attending a inner join course c on a.courseId = c.courseId inner join Student s on a.studentId=s.studentId";
+			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+		}
 	}
 }

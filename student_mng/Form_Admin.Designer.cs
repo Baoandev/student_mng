@@ -191,6 +191,7 @@
 			this.btnStudentReport.TabIndex = 21;
 			this.btnStudentReport.Text = "Student report";
 			this.btnStudentReport.UseVisualStyleBackColor = true;
+			this.btnStudentReport.Click += new System.EventHandler(this.btnStudentReport_Click);
 			// 
 			// btnCourseReport
 			// 
@@ -201,6 +202,7 @@
 			this.btnCourseReport.TabIndex = 22;
 			this.btnCourseReport.Text = "Course report";
 			this.btnCourseReport.UseVisualStyleBackColor = true;
+			this.btnCourseReport.Click += new System.EventHandler(this.btnCourseReport_Click);
 			// 
 			// btnGradeReport
 			// 
@@ -211,6 +213,7 @@
 			this.btnGradeReport.TabIndex = 23;
 			this.btnGradeReport.Text = "Grade report";
 			this.btnGradeReport.UseVisualStyleBackColor = true;
+			this.btnGradeReport.Click += new System.EventHandler(this.btnGradeReport_Click);
 			// 
 			// Form_Admin
 			// 

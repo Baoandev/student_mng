@@ -41,14 +41,7 @@ namespace student_mng.BL
 			string sqlString = $"EXECUTE Proc_LayListSinhVienTrongCourse '{maLop}'";
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}
-		/*public bool ChamDiem(string maLop, string maSv,int diem, ref string err )
-		{
-			string sqlString = "Update Into Attending Values(" + "'" +
-			maLop + "',N'" +
-			maSv + "',N'" +
-			diem + "')";
-			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-		}*/
+		
 		public bool ChamDiem(Grade gr)
 		{
 			db.OpenConnect();

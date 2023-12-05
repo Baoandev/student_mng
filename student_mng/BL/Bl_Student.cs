@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,16 @@ namespace student_mng.BL
 				return stu;
             }
             return null;
+		}
+
+		public bool CheckSVTrongLop(string maLop, string maSv, ref string err)
+		{
+			string sqlString = "Select * from Attending where studentId ='" + maSv + "' and courseId ='" + maLop + "'";
+			DataSet ds = new DataSet();
+			ds = db.ExecuteQueryDataSet(sqlString, CommandType.Text);
+			DataTable dt = new DataTable();
+			dt = ds.Tables[0];
+			return dt.Rows.Count > 0;
 		}
 	}
 }

@@ -33,7 +33,6 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.lblUsername_gv = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.txtMaMonHoc_Xoa = new System.Windows.Forms.TextBox();
 			this.txtMaGiangVien_TimLop = new System.Windows.Forms.TextBox();
 			this.btnSearch = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
+			this.cboMaLop_Xoa = new System.Windows.Forms.ComboBox();
 			this.tabControl1.SuspendLayout();
 			this.cboMaMonHoc.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).BeginInit();
@@ -84,10 +84,10 @@
 			// 
 			// cboMaMonHoc
 			// 
+			this.cboMaMonHoc.Controls.Add(this.cboMaLop_Xoa);
 			this.cboMaMonHoc.Controls.Add(this.label17);
 			this.cboMaMonHoc.Controls.Add(this.lblUsername_gv);
 			this.cboMaMonHoc.Controls.Add(this.label2);
-			this.cboMaMonHoc.Controls.Add(this.txtMaMonHoc_Xoa);
 			this.cboMaMonHoc.Controls.Add(this.txtMaGiangVien_TimLop);
 			this.cboMaMonHoc.Controls.Add(this.btnSearch);
 			this.cboMaMonHoc.Controls.Add(this.label7);
@@ -138,13 +138,6 @@
 			this.label2.Size = new System.Drawing.Size(111, 13);
 			this.label2.TabIndex = 23;
 			this.label2.Text = "Nhập mã lớp cần xóa:";
-			// 
-			// txtMaMonHoc_Xoa
-			// 
-			this.txtMaMonHoc_Xoa.Location = new System.Drawing.Point(125, 318);
-			this.txtMaMonHoc_Xoa.Name = "txtMaMonHoc_Xoa";
-			this.txtMaMonHoc_Xoa.Size = new System.Drawing.Size(100, 20);
-			this.txtMaMonHoc_Xoa.TabIndex = 22;
 			// 
 			// txtMaGiangVien_TimLop
 			// 
@@ -199,7 +192,7 @@
 			// 
 			// btnXoaMon
 			// 
-			this.btnXoaMon.Location = new System.Drawing.Point(239, 316);
+			this.btnXoaMon.Location = new System.Drawing.Point(263, 319);
 			this.btnXoaMon.Name = "btnXoaMon";
 			this.btnXoaMon.Size = new System.Drawing.Size(75, 23);
 			this.btnXoaMon.TabIndex = 12;
@@ -437,6 +430,14 @@
 			this.label8.TabIndex = 0;
 			this.label8.Text = "Chấm điểm";
 			// 
+			// cboMaLop_Xoa
+			// 
+			this.cboMaLop_Xoa.FormattingEnabled = true;
+			this.cboMaLop_Xoa.Location = new System.Drawing.Point(125, 319);
+			this.cboMaLop_Xoa.Name = "cboMaLop_Xoa";
+			this.cboMaLop_Xoa.Size = new System.Drawing.Size(121, 21);
+			this.cboMaLop_Xoa.TabIndex = 27;
+			// 
 			// Form_Teacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,7 +479,6 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Button btnSearch;
 		private System.Windows.Forms.TextBox txtMaGiangVien_TimLop;
-		private System.Windows.Forms.TextBox txtMaMonHoc_Xoa;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnChamDiem;
 		private System.Windows.Forms.TextBox txtMaSinhVien_ChamDiem;
@@ -497,5 +497,6 @@
 		private System.Windows.Forms.ComboBox cboMaLop_1;
 		private System.Windows.Forms.Label lblUsernameGv_2;
 		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.ComboBox cboMaLop_Xoa;
 	}
 }

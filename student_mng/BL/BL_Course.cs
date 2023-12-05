@@ -34,9 +34,13 @@ namespace student_mng.BL
 			string sqlString = "Delete From Course Where courseId='" + maMonHoc + "'";
 			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 		}
+		public bool XoaMon(ref string err, string maMonHoc)
+		{
+			string sqlString = "Delete From Attending Where courseId='" + maMonHoc + "'";
+			return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+		}
 		public DataSet TimMonHocTheoMaGiangVien(string maGV)
 		{
-
 			string sqlString = "SELECT * FROM Course  WHERE teacherId = '" + maGV + "'";
 			return db.ExecuteQueryDataSet(sqlString, CommandType.Text);
 		}

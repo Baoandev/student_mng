@@ -25,6 +25,7 @@ namespace student_mng
 		public Form_Teacher()
 		{
 			InitializeComponent();
+
 		}
 
 		private void Form_Teacher_Load(object sender, EventArgs e)
@@ -33,13 +34,18 @@ namespace student_mng
 			txtMaGiangVien_TimLop.Text= AccountId;
 			lblUsernameGv_2.Text= AccountId;
 			loadMaLop();
-
+			loadMaLop_Xoa();
 		}
 
 		private void btnThemMonHoc_Click(object sender, EventArgs e)
 		{
 			try
 			{
+				if (string.IsNullOrWhiteSpace(this.txtTenMonHoc.Text)|| string.IsNullOrEmpty(this.txtTenMonHoc.Text))
+				{
+					MessageBox.Show("Tên môn học không được để trống");
+					return;
+				}
 				if (int.TryParse(lblUsername_gv.Text, out int teacherId))
 				{
 					BL_Course blCou = new BL_Course();
@@ -48,7 +54,7 @@ namespace student_mng
 					cou.TeacherId = teacherId;
 					cou.NgayBatDau = dpNgayBatDau.Value;
 					cou.NgayKetThuc = dpNgayKetThuc.Value;
-
+					
 					blCou.ThemMonHoc(cou);
 
 					txtMaGiangVien.ResetText();
@@ -91,13 +97,15 @@ namespace student_mng
 		private void btnSearch_Click(object sender, EventArgs e)
 		{
 			LoadMonHoc(this.txtMaGiangVien_TimLop.Text.ToString());
+			loadMaLop();
+			loadMaLop_Xoa();
 		}
 
 		private void dgvDanhSachLopHoc_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int r = dgvDanhSachLopHoc.CurrentCell.RowIndex;
 			int maMH = (int)dgvDanhSachLopHoc.Rows[r].Cells[0].Value;
-			this.txtMaMonHoc_Xoa.Text = maMH.ToString();
+			//this.txtMaMonHoc_Xoa.Text = maMH.ToString();
 
 		}
 
@@ -111,8 +119,8 @@ namespace student_mng
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				if (traloi == DialogResult.Yes)
 				{
-					blCou.XoaMonHoc(ref err, this.txtMaMonHoc_Xoa.Text.ToString());
-
+					blCou.XoaMon(ref err, this.cboMaLop_Xoa.Text.ToString());
+					blCou.XoaMonHoc(ref err, this.cboMaLop_Xoa.Text.ToString());
 					MessageBox.Show("Đã xóa xong!");
 				}
 				else
@@ -157,12 +165,22 @@ namespace student_mng
 		{
 			try
 			{
+				if (string.IsNullOrEmpty(this.txtMaLop_ChamDiem.Text) || string.IsNullOrWhiteSpace(this.txtMaLop_ChamDiem.Text))
+				{
+					MessageBox.Show("Mã lớp không được để trống");
+					return;
+				}
+	
 				BL_Teacher blTea = new BL_Teacher();
 				Grade gr = new Grade();
 				gr.MaLop = this.txtMaLop_ChamDiem.Text.ToString();
 				gr.MaSv = this.txtMaSinhVien_ChamDiem.Text.ToString();
 				gr.Diem = int.Parse(this.txtDiem.Text);
-
+				if (gr.Diem < 0)
+				{
+					MessageBox.Show("Không được nhập điểm âm");
+					return;
+				}
 				blTea.ChamDiem(gr);
 
 				MessageBox.Show("Da cham diem cho sinh vien");
@@ -187,6 +205,17 @@ namespace student_mng
 			cboMaLop_1.DataSource = dataTable;
 			cboMaLop_1.DisplayMember = "courseId";
 			cboMaLop_1.ValueMember = "courseId";
+		}
+		public void loadMaLop_Xoa()
+		{
+			DataTable dataTable = new DataTable();
+			BL_Teacher bLTea = new BL_Teacher();
+			string maGv = this.lblUsername_gv.Text;
+			dataTable = blTea.ThongTinLop(maGv);
+
+			cboMaLop_Xoa.DataSource = dataTable;
+			cboMaLop_Xoa.DisplayMember = "courseId";
+			cboMaLop_Xoa.ValueMember = "courseId";
 		}
 
 		private void dgvListSinhVienTrong1Lop_CellClick(object sender, DataGridViewCellEventArgs e)
