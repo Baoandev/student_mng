@@ -125,7 +125,9 @@ namespace student_mng
 			if (check == true)
 			{
 				Form_Admin formad =	new Form_Admin();
+				this.Visible = false;
 				formad.ShowDialog();
+				this.Visible = true;
 			}
 
 		}

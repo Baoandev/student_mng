@@ -50,27 +50,21 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.lblUsernameGv_2 = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.cboMaLop_1 = new System.Windows.Forms.ComboBox();
 			this.txtDiem = new System.Windows.Forms.TextBox();
 			this.label16 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
 			this.btnSearchListSinhVien = new System.Windows.Forms.Button();
 			this.label14 = new System.Windows.Forms.Label();
 			this.dgvListSinhVienTrong1Lop = new System.Windows.Forms.DataGridView();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
-			this.txtMaSv_Tim = new System.Windows.Forms.TextBox();
-			this.btnTimSinhVien = new System.Windows.Forms.Button();
 			this.btnChamDiem = new System.Windows.Forms.Button();
 			this.txtMaSinhVien_ChamDiem = new System.Windows.Forms.TextBox();
 			this.txtMaLop_ChamDiem = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
-			this.cboMaLop_1 = new System.Windows.Forms.ComboBox();
-			this.label18 = new System.Windows.Forms.Label();
-			this.lblUsernameGv_2 = new System.Windows.Forms.Label();
-			this.cboMaLop_2 = new System.Windows.Forms.ComboBox();
 			this.tabControl1.SuspendLayout();
 			this.cboMaMonHoc.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachLopHoc)).BeginInit();
@@ -286,21 +280,15 @@
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.cboMaLop_2);
 			this.tabPage2.Controls.Add(this.lblUsernameGv_2);
 			this.tabPage2.Controls.Add(this.label18);
 			this.tabPage2.Controls.Add(this.cboMaLop_1);
 			this.tabPage2.Controls.Add(this.txtDiem);
 			this.tabPage2.Controls.Add(this.label16);
-			this.tabPage2.Controls.Add(this.label15);
 			this.tabPage2.Controls.Add(this.btnSearchListSinhVien);
 			this.tabPage2.Controls.Add(this.label14);
 			this.tabPage2.Controls.Add(this.dgvListSinhVienTrong1Lop);
-			this.tabPage2.Controls.Add(this.label13);
-			this.tabPage2.Controls.Add(this.label12);
 			this.tabPage2.Controls.Add(this.label11);
-			this.tabPage2.Controls.Add(this.txtMaSv_Tim);
-			this.tabPage2.Controls.Add(this.btnTimSinhVien);
 			this.tabPage2.Controls.Add(this.btnChamDiem);
 			this.tabPage2.Controls.Add(this.txtMaSinhVien_ChamDiem);
 			this.tabPage2.Controls.Add(this.txtMaLop_ChamDiem);
@@ -314,6 +302,33 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Chấm điểm";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// lblUsernameGv_2
+			// 
+			this.lblUsernameGv_2.AutoSize = true;
+			this.lblUsernameGv_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsernameGv_2.Location = new System.Drawing.Point(714, 30);
+			this.lblUsernameGv_2.Name = "lblUsernameGv_2";
+			this.lblUsernameGv_2.Size = new System.Drawing.Size(0, 24);
+			this.lblUsernameGv_2.TabIndex = 26;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label18.Location = new System.Drawing.Point(592, 29);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(116, 24);
+			this.label18.TabIndex = 25;
+			this.label18.Text = "Giảng viên:";
+			// 
+			// cboMaLop_1
+			// 
+			this.cboMaLop_1.FormattingEnabled = true;
+			this.cboMaLop_1.Location = new System.Drawing.Point(130, 277);
+			this.cboMaLop_1.Name = "cboMaLop_1";
+			this.cboMaLop_1.Size = new System.Drawing.Size(121, 21);
+			this.cboMaLop_1.TabIndex = 24;
 			// 
 			// txtDiem
 			// 
@@ -331,18 +346,9 @@
 			this.label16.TabIndex = 22;
 			this.label16.Text = "Điểm:";
 			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(608, 76);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(113, 13);
-			this.label15.TabIndex = 21;
-			this.label15.Text = "Tìm sinh viên theo lớp:";
-			// 
 			// btnSearchListSinhVien
 			// 
-			this.btnSearchListSinhVien.Location = new System.Drawing.Point(271, 245);
+			this.btnSearchListSinhVien.Location = new System.Drawing.Point(271, 275);
 			this.btnSearchListSinhVien.Name = "btnSearchListSinhVien";
 			this.btnSearchListSinhVien.Size = new System.Drawing.Size(75, 23);
 			this.btnSearchListSinhVien.TabIndex = 20;
@@ -353,7 +359,7 @@
 			// label14
 			// 
 			this.label14.AutoSize = true;
-			this.label14.Location = new System.Drawing.Point(49, 245);
+			this.label14.Location = new System.Drawing.Point(49, 280);
 			this.label14.Name = "label14";
 			this.label14.Size = new System.Drawing.Size(42, 13);
 			this.label14.TabIndex = 18;
@@ -362,55 +368,21 @@
 			// dgvListSinhVienTrong1Lop
 			// 
 			this.dgvListSinhVienTrong1Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvListSinhVienTrong1Lop.Location = new System.Drawing.Point(52, 273);
+			this.dgvListSinhVienTrong1Lop.Location = new System.Drawing.Point(461, 100);
 			this.dgvListSinhVienTrong1Lop.Name = "dgvListSinhVienTrong1Lop";
 			this.dgvListSinhVienTrong1Lop.RowHeadersWidth = 51;
-			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(521, 249);
+			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(521, 395);
 			this.dgvListSinhVienTrong1Lop.TabIndex = 17;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(608, 157);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(70, 13);
-			this.label13.TabIndex = 16;
-			this.label13.Text = "Mã sinh viên:";
-			// 
-			// label12
-			// 
-			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(608, 114);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(42, 13);
-			this.label12.TabIndex = 15;
-			this.label12.Text = "Mã lớp:";
 			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(49, 211);
+			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Location = new System.Drawing.Point(49, 239);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(154, 13);
+			this.label11.Size = new System.Drawing.Size(253, 20);
 			this.label11.TabIndex = 14;
 			this.label11.Text = "Danh sách sinh viên của 1 lớp:";
-			// 
-			// txtMaSv_Tim
-			// 
-			this.txtMaSv_Tim.Location = new System.Drawing.Point(706, 157);
-			this.txtMaSv_Tim.Name = "txtMaSv_Tim";
-			this.txtMaSv_Tim.Size = new System.Drawing.Size(100, 20);
-			this.txtMaSv_Tim.TabIndex = 12;
-			// 
-			// btnTimSinhVien
-			// 
-			this.btnTimSinhVien.Location = new System.Drawing.Point(848, 155);
-			this.btnTimSinhVien.Name = "btnTimSinhVien";
-			this.btnTimSinhVien.Size = new System.Drawing.Size(75, 23);
-			this.btnTimSinhVien.TabIndex = 11;
-			this.btnTimSinhVien.Text = "SEARCH";
-			this.btnTimSinhVien.UseVisualStyleBackColor = true;
-			this.btnTimSinhVien.Click += new System.EventHandler(this.btnTimSinhVien_Click);
 			// 
 			// btnChamDiem
 			// 
@@ -464,41 +436,6 @@
 			this.label8.TabIndex = 0;
 			this.label8.Text = "Chấm điểm";
 			// 
-			// cboMaLop_1
-			// 
-			this.cboMaLop_1.FormattingEnabled = true;
-			this.cboMaLop_1.Location = new System.Drawing.Point(130, 241);
-			this.cboMaLop_1.Name = "cboMaLop_1";
-			this.cboMaLop_1.Size = new System.Drawing.Size(121, 21);
-			this.cboMaLop_1.TabIndex = 24;
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label18.Location = new System.Drawing.Point(592, 29);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(116, 24);
-			this.label18.TabIndex = 25;
-			this.label18.Text = "Giảng viên:";
-			// 
-			// lblUsernameGv_2
-			// 
-			this.lblUsernameGv_2.AutoSize = true;
-			this.lblUsernameGv_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsernameGv_2.Location = new System.Drawing.Point(714, 30);
-			this.lblUsernameGv_2.Name = "lblUsernameGv_2";
-			this.lblUsernameGv_2.Size = new System.Drawing.Size(0, 24);
-			this.lblUsernameGv_2.TabIndex = 26;
-			// 
-			// cboMaLop_2
-			// 
-			this.cboMaLop_2.FormattingEnabled = true;
-			this.cboMaLop_2.Location = new System.Drawing.Point(706, 111);
-			this.cboMaLop_2.Name = "cboMaLop_2";
-			this.cboMaLop_2.Size = new System.Drawing.Size(121, 21);
-			this.cboMaLop_2.TabIndex = 27;
-			// 
 			// Form_Teacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,12 +485,7 @@
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox txtMaSv_Tim;
-		private System.Windows.Forms.Button btnTimSinhVien;
-		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Button btnSearchListSinhVien;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.DataGridView dgvListSinhVienTrong1Lop;
@@ -564,6 +496,5 @@
 		private System.Windows.Forms.ComboBox cboMaLop_1;
 		private System.Windows.Forms.Label lblUsernameGv_2;
 		private System.Windows.Forms.Label label18;
-		private System.Windows.Forms.ComboBox cboMaLop_2;
 	}
 }

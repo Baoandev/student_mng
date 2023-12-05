@@ -33,6 +33,8 @@ namespace student_mng
 			lblUsername_gv.Text = AccountId;
 			txtMaGiangVien_TimLop.Text= AccountId;
 			lblUsernameGv_2.Text= AccountId;
+			loadMaLop();
+
 		}
 
 		private void btnThemMonHoc_Click(object sender, EventArgs e)
@@ -125,29 +127,8 @@ namespace student_mng
 			}
 		}
 
-		private void btnTimSinhVien_Click(object sender, EventArgs e)
-		{
-			LoadSinhVien(this.cboMaLop_2.Text.ToString(),this.txtMaSv_Tim.Text.ToString());
-		}
-		public void LoadSinhVien(string maLop, string maSv)
-		{
-			try
-			{
-				BL_Teacher blTea = new BL_Teacher();
-				dtStudent = new DataTable();
-				dtStudent.Clear();
-				DataSet ds = blTea.TimSinhVien(maLop, maSv);
-				dtStudent = ds.Tables[0];
-
-				dgvListSinhVienTrong1Lop.DataSource = dtStudent;
-				dgvListSinhVienTrong1Lop.AutoResizeColumns();
-
-			}
-			catch
-			{
-				MessageBox.Show("loi");
-			}
-		}
+		
+	
 		public void LoadListSinhVien(string maLop)
 		{
 			try
@@ -201,14 +182,12 @@ namespace student_mng
 		{
 			DataTable dataTable = new DataTable();
 			BL_Teacher bLTea = new BL_Teacher();
-			//string maGv = lblUsernameGv_2.Text;
-			dataTable = blTea.layMaLop();
+			string maGv = this.lblUsernameGv_2.Text;
+			dataTable = blTea.ThongTinLop(maGv);
 
-			foreach (DataRow dr in dataTable.Rows)
-			{
-				cboMaLop_1.Items.Add(dr["courseId"].ToString());
-				cboMaLop_2.Items.Add(dr["courseId"].ToString());
-			}
+			cboMaLop_1.DataSource = dataTable;
+			cboMaLop_1.DisplayMember = "courseId";
+			cboMaLop_1.ValueMember = "courseId";
 		}
 	}
 }
