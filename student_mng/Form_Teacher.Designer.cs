@@ -189,6 +189,7 @@
 			this.dgvDanhSachLopHoc.Size = new System.Drawing.Size(438, 393);
 			this.dgvDanhSachLopHoc.TabIndex = 14;
 			this.dgvDanhSachLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLopHoc_CellClick);
+			this.dgvDanhSachLopHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLopHoc_CellContentClick);
 			// 
 			// btnXoaMon
 			// 
@@ -322,6 +323,7 @@
 			this.cboMaLop_1.Name = "cboMaLop_1";
 			this.cboMaLop_1.Size = new System.Drawing.Size(121, 21);
 			this.cboMaLop_1.TabIndex = 24;
+			this.cboMaLop_1.SelectionChangeCommitted += new System.EventHandler(this.cboMaLop_1_SelectionChangeCommitted);
 			// 
 			// txtDiem
 			// 
@@ -392,6 +394,7 @@
 			// 
 			this.txtMaSinhVien_ChamDiem.Location = new System.Drawing.Point(151, 129);
 			this.txtMaSinhVien_ChamDiem.Name = "txtMaSinhVien_ChamDiem";
+			this.txtMaSinhVien_ChamDiem.ReadOnly = true;
 			this.txtMaSinhVien_ChamDiem.Size = new System.Drawing.Size(100, 20);
 			this.txtMaSinhVien_ChamDiem.TabIndex = 8;
 			// 
@@ -399,6 +402,7 @@
 			// 
 			this.txtMaLop_ChamDiem.Location = new System.Drawing.Point(151, 89);
 			this.txtMaLop_ChamDiem.Name = "txtMaLop_ChamDiem";
+			this.txtMaLop_ChamDiem.ReadOnly = true;
 			this.txtMaLop_ChamDiem.Size = new System.Drawing.Size(100, 20);
 			this.txtMaLop_ChamDiem.TabIndex = 7;
 			// 

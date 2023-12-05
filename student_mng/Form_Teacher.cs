@@ -104,8 +104,20 @@ namespace student_mng
 		private void dgvDanhSachLopHoc_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int r = dgvDanhSachLopHoc.CurrentCell.RowIndex;
-			int maMH = (int)dgvDanhSachLopHoc.Rows[r].Cells[0].Value;
-			//this.txtMaMonHoc_Xoa.Text = maMH.ToString();
+
+			if (float.TryParse(dgvDanhSachLopHoc.Rows[r].Cells[0].Value?.ToString(), out float maLop))
+			{
+				this.tx.Text = diem.ToString();
+			}
+			else
+			{
+				MessageBox.Show("Không có sinh viên"); ;
+			}
+
+			if (float.TryParse(dgvListSinhVienTrong1Lop.Rows[r].Cells[1].Value?.ToString(), out float maSV))
+			{
+				this.txtMaSinhVien_ChamDiem.Text = maSV.ToString();
+			}
 
 		}
 
@@ -221,8 +233,32 @@ namespace student_mng
 		private void dgvListSinhVienTrong1Lop_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			int r = dgvListSinhVienTrong1Lop.CurrentCell.RowIndex;
-			this.txtDiem.Text = Convert.ToSingle(dgvListSinhVienTrong1Lop.Rows[r].Cells[0].Value).ToString();
-			this.txtMaSinhVien_ChamDiem.Text = Convert.ToSingle(dgvListSinhVienTrong1Lop.Rows[r].Cells[1].Value).ToString();
+
+			if (float.TryParse(dgvListSinhVienTrong1Lop.Rows[r].Cells[0].Value?.ToString(), out float diem))
+			{
+				this.txtDiem.Text = diem.ToString();
+			}
+			else
+			{
+				MessageBox.Show("Không có sinh viên"); ;
+			}
+
+			if (float.TryParse(dgvListSinhVienTrong1Lop.Rows[r].Cells[1].Value?.ToString(), out float maSV))
+			{
+				this.txtMaSinhVien_ChamDiem.Text = maSV.ToString();
+			}
+
+		}
+
+
+		private void cboMaLop_1_SelectionChangeCommitted(object sender, EventArgs e)
+		{
+			txtMaLop_ChamDiem.Text = cboMaLop_1.SelectedValue.ToString();
+		}
+
+		private void dgvDanhSachLopHoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
 		}
 	}
 }

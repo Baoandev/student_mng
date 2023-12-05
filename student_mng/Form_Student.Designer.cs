@@ -82,7 +82,7 @@
 			// 
 			this.dgvDanhSachLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvDanhSachLop.Location = new System.Drawing.Point(9, 107);
-			this.dgvDanhSachLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dgvDanhSachLop.Margin = new System.Windows.Forms.Padding(2);
 			this.dgvDanhSachLop.Name = "dgvDanhSachLop";
 			this.dgvDanhSachLop.RowHeadersWidth = 51;
 			this.dgvDanhSachLop.RowTemplate.Height = 24;
@@ -113,7 +113,7 @@
 			// txtMaSv
 			// 
 			this.txtMaSv.Location = new System.Drawing.Point(162, 403);
-			this.txtMaSv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtMaSv.Margin = new System.Windows.Forms.Padding(2);
 			this.txtMaSv.Name = "txtMaSv";
 			this.txtMaSv.ReadOnly = true;
 			this.txtMaSv.Size = new System.Drawing.Size(76, 20);
@@ -122,8 +122,9 @@
 			// txtMaLop
 			// 
 			this.txtMaLop.Location = new System.Drawing.Point(162, 448);
-			this.txtMaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtMaLop.Margin = new System.Windows.Forms.Padding(2);
 			this.txtMaLop.Name = "txtMaLop";
+			this.txtMaLop.ReadOnly = true;
 			this.txtMaLop.Size = new System.Drawing.Size(76, 20);
 			this.txtMaLop.TabIndex = 8;
 			// 
@@ -131,7 +132,7 @@
 			// 
 			this.btnDangKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDangKi.Location = new System.Drawing.Point(62, 476);
-			this.btnDangKi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnDangKi.Margin = new System.Windows.Forms.Padding(2);
 			this.btnDangKi.Name = "btnDangKi";
 			this.btnDangKi.Size = new System.Drawing.Size(77, 29);
 			this.btnDangKi.TabIndex = 9;
@@ -143,7 +144,7 @@
 			// 
 			this.dgvListLopCuaSinhVienDaDangKi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvListLopCuaSinhVienDaDangKi.Location = new System.Drawing.Point(585, 107);
-			this.dgvListLopCuaSinhVienDaDangKi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dgvListLopCuaSinhVienDaDangKi.Margin = new System.Windows.Forms.Padding(2);
 			this.dgvListLopCuaSinhVienDaDangKi.Name = "dgvListLopCuaSinhVienDaDangKi";
 			this.dgvListLopCuaSinhVienDaDangKi.RowHeadersWidth = 51;
 			this.dgvListLopCuaSinhVienDaDangKi.RowTemplate.Height = 24;
@@ -165,7 +166,7 @@
 			// 
 			this.btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnShow.Location = new System.Drawing.Point(880, 71);
-			this.btnShow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnShow.Margin = new System.Windows.Forms.Padding(2);
 			this.btnShow.Name = "btnShow";
 			this.btnShow.Size = new System.Drawing.Size(77, 29);
 			this.btnShow.TabIndex = 12;
@@ -177,7 +178,7 @@
 			// 
 			this.btnXuatKetQua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXuatKetQua.Location = new System.Drawing.Point(585, 422);
-			this.btnXuatKetQua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnXuatKetQua.Margin = new System.Windows.Forms.Padding(2);
 			this.btnXuatKetQua.Name = "btnXuatKetQua";
 			this.btnXuatKetQua.Size = new System.Drawing.Size(195, 29);
 			this.btnXuatKetQua.TabIndex = 13;
@@ -188,7 +189,7 @@
 			// btStudentDetail
 			// 
 			this.btStudentDetail.Location = new System.Drawing.Point(858, 16);
-			this.btStudentDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btStudentDetail.Margin = new System.Windows.Forms.Padding(2);
 			this.btStudentDetail.Name = "btStudentDetail";
 			this.btStudentDetail.Size = new System.Drawing.Size(99, 29);
 			this.btStudentDetail.TabIndex = 14;

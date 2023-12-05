@@ -100,7 +100,6 @@ namespace student_mng
 				}
 				else
 				{
-					// Xử lý trường hợp giá trị không hợp lệ
 					MessageBox.Show("Không có lớp học phần.");
 				}
 			}
