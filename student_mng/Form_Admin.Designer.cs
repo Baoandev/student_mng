@@ -44,6 +44,9 @@
 			this.txtUsername_SV = new System.Windows.Forms.TextBox();
 			this.txtMatKhau_SV = new System.Windows.Forms.TextBox();
 			this.btnThem = new System.Windows.Forms.Button();
+			this.btnStudentReport = new System.Windows.Forms.Button();
+			this.btnCourseReport = new System.Windows.Forms.Button();
+			this.btnGradeReport = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -171,7 +174,7 @@
 			// btnThem
 			// 
 			this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnThem.Location = new System.Drawing.Point(327, 368);
+			this.btnThem.Location = new System.Drawing.Point(338, 359);
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new System.Drawing.Size(82, 30);
 			this.btnThem.TabIndex = 20;
@@ -179,11 +182,44 @@
 			this.btnThem.UseVisualStyleBackColor = true;
 			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
+			// btnStudentReport
+			// 
+			this.btnStudentReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStudentReport.Location = new System.Drawing.Point(526, 309);
+			this.btnStudentReport.Name = "btnStudentReport";
+			this.btnStudentReport.Size = new System.Drawing.Size(132, 30);
+			this.btnStudentReport.TabIndex = 21;
+			this.btnStudentReport.Text = "Student report";
+			this.btnStudentReport.UseVisualStyleBackColor = true;
+			// 
+			// btnCourseReport
+			// 
+			this.btnCourseReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCourseReport.Location = new System.Drawing.Point(526, 239);
+			this.btnCourseReport.Name = "btnCourseReport";
+			this.btnCourseReport.Size = new System.Drawing.Size(132, 30);
+			this.btnCourseReport.TabIndex = 22;
+			this.btnCourseReport.Text = "Course report";
+			this.btnCourseReport.UseVisualStyleBackColor = true;
+			// 
+			// btnGradeReport
+			// 
+			this.btnGradeReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGradeReport.Location = new System.Drawing.Point(526, 385);
+			this.btnGradeReport.Name = "btnGradeReport";
+			this.btnGradeReport.Size = new System.Drawing.Size(132, 30);
+			this.btnGradeReport.TabIndex = 23;
+			this.btnGradeReport.Text = "Grade report";
+			this.btnGradeReport.UseVisualStyleBackColor = true;
+			// 
 			// Form_Admin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnGradeReport);
+			this.Controls.Add(this.btnCourseReport);
+			this.Controls.Add(this.btnStudentReport);
 			this.Controls.Add(this.btnThem);
 			this.Controls.Add(this.txtMatKhau_SV);
 			this.Controls.Add(this.txtUsername_SV);
@@ -227,5 +263,8 @@
 		private System.Windows.Forms.TextBox txtUsername_SV;
 		private System.Windows.Forms.TextBox txtMatKhau_SV;
 		private System.Windows.Forms.Button btnThem;
+		private System.Windows.Forms.Button btnStudentReport;
+		private System.Windows.Forms.Button btnCourseReport;
+		private System.Windows.Forms.Button btnGradeReport;
 	}
 }

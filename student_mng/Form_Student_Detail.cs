@@ -36,8 +36,8 @@ namespace student_mng
             {
                 txtSDStudentId.Text = detailStudent.StudentId.ToString();
                 txtSDFullname.Text = detailStudent.FullName.ToString();
-                txtSDBirthday.Text = detailStudent.Birthday.ToString();
-                txtSDSex.Text = detailStudent.Sex.ToString();
+                txtSDBirthday.Text = string.Format("{0:dd-MM-yyyy}", detailStudent.Birthday);
+				txtSDSex.Text = detailStudent.Sex.ToString();
                 txtSDPhone.Text = detailStudent.Phone.ToString();
                 txtSDAddress.Text = detailStudent.Address.ToString();
             }
