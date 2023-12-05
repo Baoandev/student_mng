@@ -101,25 +101,7 @@ namespace student_mng
 			loadMaLop_Xoa();
 		}
 
-		private void dgvDanhSachLopHoc_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-			int r = dgvDanhSachLopHoc.CurrentCell.RowIndex;
-
-			if (float.TryParse(dgvDanhSachLopHoc.Rows[r].Cells[0].Value?.ToString(), out float maLop))
-			{
-				this.tx.Text = diem.ToString();
-			}
-			else
-			{
-				MessageBox.Show("Không có sinh viên"); ;
-			}
-
-			if (float.TryParse(dgvListSinhVienTrong1Lop.Rows[r].Cells[1].Value?.ToString(), out float maSV))
-			{
-				this.txtMaSinhVien_ChamDiem.Text = maSV.ToString();
-			}
-
-		}
+		
 
 		private void btnXoaMon_Click(object sender, EventArgs e)
 		{

@@ -188,7 +188,6 @@
 			this.dgvDanhSachLopHoc.RowHeadersWidth = 51;
 			this.dgvDanhSachLopHoc.Size = new System.Drawing.Size(438, 393);
 			this.dgvDanhSachLopHoc.TabIndex = 14;
-			this.dgvDanhSachLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLopHoc_CellClick);
 			this.dgvDanhSachLopHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachLopHoc_CellContentClick);
 			// 
 			// btnXoaMon

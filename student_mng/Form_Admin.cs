@@ -25,6 +25,28 @@ namespace student_mng
 		{
 			try 
 			{
+				List<TextBox> textBoxesToCheck = new List<TextBox>
+				{
+					this.txtHoTenSV, this.txtDiaChi_SV, this.txtGioiTinh_SV, this.txtSoDienThoai_SV, this.txtUsername_SV, this.txtMatKhau_SV
+				};
+
+				foreach (TextBox textBox in textBoxesToCheck)
+				{
+					try
+					{
+						if (string.IsNullOrEmpty(textBox.Text) || string.IsNullOrWhiteSpace(textBox.Text))
+						{
+							string fieldName = textBox.Name;
+							throw new Exception($"{fieldName} không được để trống");
+						}
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						return;
+					}
+				}
+
 				BL_Admin blAd = new BL_Admin();
 				Student stu = new Student();
 				stu.FullName=this.txtHoTenSV.Text.ToString();
@@ -37,7 +59,7 @@ namespace student_mng
 
 				blAd.ThemSinhVien(stu);
 
-				MessageBox.Show("Da them sinh vien");
+				MessageBox.Show("Đã thêm");
 
 				txtHoTenSV.ResetText();
 				txtGioiTinh_SV.ResetText();
