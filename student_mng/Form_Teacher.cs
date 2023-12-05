@@ -25,7 +25,6 @@ namespace student_mng
 		public Form_Teacher()
 		{
 			InitializeComponent();
-			loadMaLop();
 		}
 
 		private void Form_Teacher_Load(object sender, EventArgs e)
@@ -188,6 +187,17 @@ namespace student_mng
 			cboMaLop_1.DataSource = dataTable;
 			cboMaLop_1.DisplayMember = "courseId";
 			cboMaLop_1.ValueMember = "courseId";
+		}
+
+		private void dgvListSinhVienTrong1Lop_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			int r = dgvListSinhVienTrong1Lop.CurrentCell.RowIndex;
+
+			// Chuyển đổi giá trị của ô "Diem" sang kiểu float và xuất ra
+			this.txtDiem.Text = Convert.ToSingle(dgvListSinhVienTrong1Lop.Rows[r].Cells[0].Value).ToString();
+
+			// Chuyển đổi giá trị của ô "MaSinhVien" sang kiểu float và xuất ra
+			this.txtMaSinhVien_ChamDiem.Text = Convert.ToSingle(dgvListSinhVienTrong1Lop.Rows[r].Cells[1].Value).ToString();
 		}
 	}
 }

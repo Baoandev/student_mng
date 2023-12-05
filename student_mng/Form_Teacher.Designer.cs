@@ -117,9 +117,9 @@
 			this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label17.Location = new System.Drawing.Point(489, 14);
 			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(99, 20);
+			this.label17.Size = new System.Drawing.Size(124, 20);
 			this.label17.TabIndex = 26;
-			this.label17.Text = "Giảng viên:";
+			this.label17.Text = "Mã giảng viên:";
 			// 
 			// lblUsername_gv
 			// 
@@ -318,9 +318,9 @@
 			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label18.Location = new System.Drawing.Point(592, 29);
 			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(116, 24);
+			this.label18.Size = new System.Drawing.Size(147, 24);
 			this.label18.TabIndex = 25;
-			this.label18.Text = "Giảng viên:";
+			this.label18.Text = "Mã giảng viên:";
 			// 
 			// cboMaLop_1
 			// 
@@ -373,6 +373,7 @@
 			this.dgvListSinhVienTrong1Lop.RowHeadersWidth = 51;
 			this.dgvListSinhVienTrong1Lop.Size = new System.Drawing.Size(521, 395);
 			this.dgvListSinhVienTrong1Lop.TabIndex = 17;
+			this.dgvListSinhVienTrong1Lop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListSinhVienTrong1Lop_CellClick);
 			// 
 			// label11
 			// 
